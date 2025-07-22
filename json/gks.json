@@ -1,8 +1,16 @@
 {
-    "en": {
+    "EN": {
         "Home": {
             "graph": {},
-            "ketoneBanner": {},
+            "ketoneBanner": {
+                "hi": "HI",
+                "ketones": "Ketones",
+                "belowValue": "Below {{ value }} {{ uom }}",
+                "highKetones": "High Ketones",
+                "normalKetones": "Normal Ketones",
+                "elevatedKetones": "Elevated Ketones",
+                "highKetonesOutOfRange": "High Ketones (Out of Range)"
+            },
             "glucoseBanner": {
                 "hi": "HI",
                 "lo": "LO",
@@ -17,17 +25,23 @@
             },
             "noActiveSensor": {},
             "sensorStarting": {
-                "sensorReadyIn": "Your Sensor will be ready in:"
+                "sensorReadyIn": "Your sensor will be ready in:"
             },
             "sensorErrorBanner": {
                 "signalLoss": "Signal Loss",
                 "sensorError": "Sensor Error",
                 "bluetoothOff": "Bluetooth Off",
-                "sensorTooHot": "Sensor Too Hot",
+                "ketonePaused": "Ketone readings paused",
+                "sensorTooHot": "Sensor too hot",
                 "glucosePaused": "Glucose Readings Paused",
-                "sensorTooCold": "Sensor Too Cold"
+                "sensorTooCold": "Sensor too cold"
             },
-            "sensorSupportsSet": {},
+            "sensorSupportsSet": {
+                "sensorSupports": "SENSOR SUPPORTS",
+                "multipleDevices": "Multiple devices",
+                "ketoneMonitoring": "Ketone monitoring and alarms",
+                "glucoseMonitoring": "Glucose monitoring and alarms"
+            },
             "ketonesErrorBanner": {},
             "sensorWearDuration": {
                 "daysUntilSensorEnds": "Day until Sensor ends",
@@ -37,7 +51,11 @@
                 "hoursUntilSensorEnds_plural": "Hours until Sensor ends",
                 "minutesUntilSensorEnds_plural": "Minutes until Sensor ends"
             },
-            "multipleDeviceBottomSheet": {}
+            "multipleDeviceBottomSheet": {
+                "title": "Multiple devices",
+                "subTitle": "Readings on an additional device",
+                "description": "This sensor supports readings on multiple devices. Additional devices must be added within 24 hours of starting your sensor."
+            }
         },
         "unit": {
             "mg": "mg",
@@ -54,16 +72,21 @@
                 "sound": "Sound",
                 "custom": "Custom",
                 "silent": "Silent",
+                "mmolVal": "{{ value }} mmol/L",
+                "alarmCap": "ALARM",
+                "soundCap": "SOUND",
                 "standard": "Standard",
                 "silentMode": {
                     "title": "Silent Mode",
                     "description": "Delivers glucose and signal loss alarms without sound for a specified period.",
+                    "descriptionGKS": "Delivers glucose, ketone, and signal loss alarms without sound for a specified period.",
                     "alarmsSilencedFor": "Your alarms will be silenced for:"
                 },
                 "systemAlarms": {
                     "title": "System Alarms",
                     "signalLossAlarmDesc": "Receive a Signal Loss Alarm when your glucose alarms are not available because the Sensor is not communicating with the app.",
-                    "signalLossAlarmTitle": "Signal Loss Alarm"
+                    "signalLossAlarmTitle": "Signal Loss Alarm",
+                    "signalLossAlarmDescGKS": "Receive a Signal Loss Alarm when your glucose and ketone alarms are not available because the sensor is not communicating with the app."
                 },
                 "glucoseAlarms": {
                     "title": "Glucose Alarms",
@@ -76,13 +99,20 @@
                 "alarmAboveLabel": "When glucose goes above",
                 "alarmBelowLabel": "When glucose goes below",
                 "overrideDNDDesc": "Turn ON if you want this alarm to always play a sound even if your phone is muted or Do Not Disturb is on.",
-                "ketonesAlarmsSet": {},
+                "ketonesAlarmsSet": {
+                    "title": "KETONE ALARMS",
+                    "aboveValue": "Above {{ value }} {{ uom }}",
+                    "ketonesAbove": "When ketones go above",
+                    "ketonesAlarm1": "High Ketones Alarm",
+                    "ketonesAlarm2": "Urgent High Ketones Alarm",
+                    "ketonesAlarm1Desc": "This alarm is ON and cannot be modified.",
+                    "ketonesAlarm2Desc": "This alarm is ON and cannot be modified."
+                },
                 "overrideDNDLabel": "Override Do Not Disturb",
                 "alarmToneDescription": "Choose the sound for this alarm. Alarms will follow the volume and vibration settings for your phone.",
                 "overrideDNDAlwaysOnDesc": "This alarm will always play a sound even if your phone is muted or Do Not Disturb is on."
             }
         },
-        "assist": {},
         "common": {
             "no": "No",
             "of": "of",
@@ -112,16 +142,11 @@
             "tryAgain": "Try Again",
             "learnMore": "Learn More",
             "hrsWithCount": "{{ count }} hr",
-            "ariaPlayVideo": "Play video",
             "createAccount": "Create Account",
             "daysWithCount": "{{ count }} day",
             "minsWithCount": "{{ count }} min",
-            "ariaPauseVideo": "Pause video",
             "hoursWithCount": "{{ count }} hour",
             "minutes_plural": "minutes",
-            "ariaReplayVideo": "Replay video",
-            "ariaRewindVideo": "Rewind video",
-            "ariaForwardVideo": "Fast forward video",
             "minutesWithCount": "{{ count }} minute",
             "maxCharacterLimitN": "Max character limit is {{ value }}",
             "hrsWithCount_plural": "{{ count }} hrs",
@@ -138,7 +163,6 @@
                 "body": "Glucose Management Indicator uses average Sensor glucose data.  GMI can be used as an indicator of how well your glucose levels have been controlled.\n\nNote: GMI needs at least 5 days of glucose data.",
                 "title": "Glucose Management Indicator (GMI)"
             },
-            "deleteFood": {},
             "NFCDisabled": {
                 "body": "In order to use this app, NFC must be enabled on your phone. Do you wish to turn it on?",
                 "title": "NFC Disabled"
@@ -150,13 +174,14 @@
                 "body": "You must accept both notices by tapping both checkboxes to use the app."
             },
             "selectSensor": {
+                "gks": "{{ sensorName }} Sensors",
                 "fsl2": "Libre 2 Sensors",
                 "fsl3": "Libre 3 Sensors",
                 "title": "Select Sensor Type"
             },
             "glucoseBanner": {
                 "lowGlucose": "Low glucose can be dangerous. Treat as recommended by your health care professional.",
-                "highGlucose": "Very high glucose can be dangerous. Treat as recommended by your health care professional. Consider checking your ketone.",
+                "highGlucose": "Very high glucose levels can be dangerous. Treat as your healthcare professional recommends. Consider checking your ketone levels as well.",
                 "checkGlucose": {
                     "doGlucoseTest": "Do a blood glucose test before making treatment decisions.",
                     "checkBloodGlucose": "Check Blood Glucose"
@@ -164,15 +189,20 @@
                 "glucoseGoingLow": "Low glucose can be dangerous. Treat as recommended by your health care professional.",
                 "glucoseGoingHigh": "Very high glucose levels can be dangerous. Treat as your healthcare professional recommends. Consider checking your ketone levels as well.",
                 "lowGlucoseOutOfRange": "Low glucose can be dangerous. Confirm your glucose and treat as recommended by your health care professional.",
-                "highGlucoseOutOfRange": "Very high glucose can be dangerous. Confirm your glucose and treat as recommended by your health care professional. Consider checking your ketone."
+                "highGlucoseOutOfRange": "Very high glucose levels can be dangerous. Treat as your healthcare professional recommends. Consider checking your ketone levels as well."
             },
-            "ketonesAlarm1": {},
-            "ketonesAlarm2": {},
+            "ketonesAlarm1": {
+                "title": "Alarm",
+                "description": "Receive a High Ketones Alarm when your ketones are higher than this value."
+            },
+            "ketonesAlarm2": {
+                "title": "Alarm",
+                "description": "Receive an Urgent High Ketones Alarm when your ketones are higher than this value."
+            },
             "deleteEntrySet": {
                 "body": "Are you sure you want to permanently delete the logbook entry?",
                 "title": "Delete Entry"
             },
-            "noActiveSensor": {},
             "reportSettings": {
                 "title": "Report Settings",
                 "description": "Your target glucose range will be displayed on various graphs. Check with your health care professional if you do not know it.\n\nNote: The target glucose range setting will not set glucose alarm levels."
@@ -182,7 +212,8 @@
                 "title": "Silent Mode is ON",
                 "turnOffButton": "Turn Off",
                 "alarmsBannerBody": "Silent Mode is enabled, and your glucose and signal loss alarms have been silenced.\n\nIf you wish to receive alarm sounds, turn off Silent Mode.",
-                "alarmsSettingBody": "You cannot customize your alarms during Silent Mode. \n\nIf you wish to customize your alarms, turn off Silent Mode."
+                "alarmsSettingBody": "You cannot customize your alarms during Silent Mode. \n\nIf you wish to customize your alarms, turn off Silent Mode.",
+                "alarmsBannerBodyGKS": "Silent Mode is enabled, and your glucose, ketone, and signal loss alarms have been silenced.\n\nIf you wish to receive alarm sounds, turn off Silent Mode."
             },
             "startNewSensor": {
                 "body": "Starting a new Sensor will end the Sensor you are currently using.\n\nWould you like to start the new Sensor now?",
@@ -195,7 +226,6 @@
                 "discardChanges": "Discard Changes",
                 "unsavedChanges": "Unsaved Changes"
             },
-            "aiLanguageError": {},
             "graphTimeChange": {
                 "timeChangeMagnitude": "Time zone change from {{ zone1 }} to {{ zone2 }} ({{ diff }})"
             },
@@ -268,7 +298,6 @@
                 "body": "Please check your internet connection and try again.",
                 "title": "Error Loading Page"
             },
-            "foodUpdatedToast": {},
             "highGlucoseAlarm": {
                 "title": "Alarm",
                 "description": "Receive a High Glucose Alarm when your glucose is higher than this value."
@@ -276,6 +305,7 @@
             "turnOnSilentMode": {
                 "body": "All glucose and signal loss alarms will be silenced for {{ duration }}.",
                 "title": "Silent Mode",
+                "bodyGKS": "All glucose, ketone, and signal loss alarms will be silenced for {{ duration }}.",
                 "turnOnButton": "Turn On"
             },
             "alarmsUnavailable": {
@@ -312,7 +342,7 @@
                     "title": "Update Date & Time"
                 },
                 "android": {
-                    "body": "In order to use this app, your phone must be set to automatically update date and time.",
+                    "body": "In order to use this app, your phone must be set to automatically update date and time. Do you wish to turn it on?",
                     "body2": "Enable Automatic Date & Time from your phone settings.",
                     "title": "Automatic Date & Time Disabled"
                 }
@@ -325,10 +355,12 @@
                 "signalLoss": "Keep your phone in range of the Sensor at all times.\n\nIf you continue having issues, try turning your phone’s Bluetooth off and on or restarting your phone.",
                 "sensorError": "Your Sensor runs continuous quality checks, and glucose readings have been paused. Once it passes these checks, your Sensor will resume providing readings.\n\nPlease check again in {{ duration }}.",
                 "bluetoothOff": "Bluetooth is required to receive glucose readings.",
-                "sensorTooHot": "The Sensor is too hot to give glucose readings. Please check again in a few minutes.",
-                "sensorTooCold": "The Sensor is too cold to give glucose readings. Please check again in a few minutes."
+                "sensorTooHot": "Your sensor is too hot to read your glucose levels. Check again in a few minutes.",
+                "sensorTooCold": "Your sensor is too cold to read your glucose levels. Check again in a few minutes.",
+                "sensorTooHotGKS": "Your sensor is too hot to read your ketone levels. Check again in a few minutes.",
+                "sensorTooColdGKS": "Your sensor is too cold to read your ketone levels. Check again in a few minutes.",
+                "ketoneReadingsPaused": "Your sensor runs continuous quality checks, and ketone readings have been paused. Once it passes these checks, your sensor will resume providing readings.\n\nPlease check again in {{ duration }}."
             },
-            "photoTooSmallError": {},
             "reportsServerError": {
                 "title": "Error Loading"
             },
@@ -366,27 +398,17 @@
                 "title": "Average Glucose"
             },
             "dailyGraphInformation": {
-                "body": "Your daily graph shows the daily glucose readings from your sensor.   \n\nIf your time zone changes, you’ll see the clock icon. This may cause gaps in the graph or hide your glucose readings. \n\nNote: For Libre 2 sensors, if your Bluetooth has lost its connection, there may be gaps in the graph. To fill in gaps from the last 8 hours, scan your Libre 2 sensor. ",
+                "body": "Daily Graph provides a graph of your Sensor glucose readings by day.\nYou might see gaps in the graph during times when you have not scanned at least once in 8 hours or if you lost Bluetooth connection (may apply to FreeStyle Libre 2 users).  \nA clock symbol may appear indicating a time zone change. Gaps in the graph may result or glucose readings may be hidden.",
                 "title": "Daily Graph"
             },
-            "notEnoughStorageError": {},
-            "allowPhotoAccessDialog": {},
             "doNotDisturbPermission": {
                 "body": "The app needs permission to access the Do Not Disturb override setting.\n\nOpen settings, select the app, and allow this permission. Come back to the app to finish setup.",
                 "title": "Allow App Permission"
-            },
-            "firstTimeAlarmTutorial": {},
-            "longactingDoseReminder": {
-                "bottomSheetBody": "<p>If it's been <strong>more than 24 hours</strong> since your last dose, it may be time to take a dose.</p>\n<p>\nIf it's been <strong>less than 24 hours</strong>, your app is not in sync. Bring your phone and Basal Cap together so the app gets the most up-to-date information.</p>\n<p>\n<strong>TIP:</strong> Have your phone nearby when you take a dose, so the app gets updated right away.</p>",
-                "bottomSheetTitle": "Check Libre Cap Basal for time since last dose",
-                "notificationBody": "If it's been more than 24 hours since your last dose of long-acting insulin, it may be time to take a dose. Tap for details.",
-                "notificationTitle": "Check Libre Cap Basal"
             },
             "lowGlucoseEventsReport": {
                 "body": "Low Glucose Events provides information about the number of low glucose events measured by your Sensor. A low glucose event is recorded when your Sensor glucose reading is lower than 70 mg/dL for longer than 15 minutes. The total number of events is displayed above the graph. The bar graph displays the low glucose events in different periods of the day.",
                 "title": "Low Glucose Events"
             },
-            "allowCameraAccessDialog": {},
             "internetConnectionError": {
                 "body": "Please check your internet connection and try again.",
                 "title": "Error Loading Page"
@@ -404,32 +426,31 @@
                 "body": "This app is no longer connected to your account and therefore cannot access this feature.",
                 "title": "Feature Not Available"
             },
-            "foodPredictionReadyToast": {},
-            "ketoneSummaryBottomSheet": {},
             "carbohydrateUnitsServings": {
                 "title": "Servings"
             },
-            "selectADifferentTimeDialog": {},
             "unsuccessfulSensorActivation": {
                 "headers": {
                     "scanError": "Scan Error",
                     "checkSensor": "Check Sensor",
                     "sensorEnded": "Sensor Ended",
-                    "currentSensor": "Current Sensor",
+                    "pairingError": "Pairing error",
+                    "currentSensor": "Sensor already started",
                     "replaceSensor": "Replace Sensor",
                     "sensorStartingUp": "Sensor Starting Up",
                     "incompatibleSensor": "Incompatible Sensor",
-                    "sensorAlreadyInUse": "Sensor Already in Use"
+                    "sensorAlreadyInUse": "Sensor already in use"
                 },
                 "descriptions": {
                     "scanError": "Your scan was unsuccessful. Tap the scan button and scan again.",
                     "checkSensor": "Please check your Sensor. If it is loose from your skin, please remove the Sensor and start a new one. If it is applied properly, try starting the Sensor again.",
-                    "sensorEnded": "Start a new Sensor to check glucose.",
-                    "currentSensor": "The Sensor you just scanned is already started. You will automatically receive glucose results directly to your phone.",
-                    "replaceSensor": "Your Sensor runs continuous quality checks, and it has shut itself down for your safety.\n\nPlease apply and start a new Sensor to continue monitoring your glucose.",
+                    "sensorEnded": "Start a new Sensor to check readings.",
+                    "pairingError": "To add your sensor to this device after the first 24 hours, both devices must be connected to LibreView with the same account.",
+                    "currentSensor": "You've already started this sensor and you'll automatically receive sensor readings.",
+                    "replaceSensor": "Your Sensor runs continuous quality checks, and it has shut itself down for your safety.\n\nPlease apply and start a new Sensor to continue monitoring your readings.",
                     "sensorStartingUp": "This Sensor has been started but is not ready to be used yet.",
                     "incompatibleSensor": "The Sensor cannot be used with this version of the app.",
-                    "sensorAlreadyInUse": "The Sensor you just scanned was started by another device and cannot be used."
+                    "sensorAlreadyInUse": "The sensor you just scanned was started by another device and cannot be used."
                 }
             },
             "updateDietaryPreferencesHelpText": {},
@@ -447,7 +468,9 @@
             "notEnoughSensorData": "Not enough Sensor data",
             "numOfDaysDataRequired": "{{ count }} days of data is required"
         },
-        "sensors": {},
+        "sensors": {
+            "44100": "Libre Duo"
+        },
         "Settings": {
             "appSettings": {
                 "uom": "Unit of Measurement",
@@ -505,7 +528,6 @@
                     "guides": "GUIDES",
                     "usersManual": "User’s Manual",
                     "quickStartGuide": "Quick Start Guide",
-                    "libreCapBasalGuides": "Libre Cap Basal Guides",
                     "quickReferenceGuide": "Quick Reference Guide"
                 },
                 "safety": {
@@ -524,7 +546,8 @@
                     "howToScan": "How to Scan a Sensor",
                     "tutorials": "TUTORIALS",
                     "howToApply": "How to Apply a Sensor",
-                    "glucoseReadings": "Glucose Readings"
+                    "glucoseReadings": "Glucose Readings",
+                    "ketoneMonitoring": "Ketone Monitoring"
                 }
             }
         },
@@ -552,45 +575,43 @@
                 "copyrightStatement": "FreeStyle, Libre, and related brand marks are trademarks of Abbott Diabetes Care Inc, in various jurisdictions."
             }
         },
-        "dietFactors": {
-            "note": "Note",
-            "carbs": "Carbs",
-            "exercise": "Exercise",
-            "laInsulin": "Long-Acting Insulin",
-            "raInsulin": "Rapid-Acting Insulin"
-        },
         "appLabelling": {
             "helpMenuAppLabels": {
-                "GKS": {},
+                "GKS": {
+                    "userManual": "https://cms.libreview.io/pDmlff34G6mGywrFer5Xq-ART48742-001-A/UserManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/77jWjkyiRxqNNAKIEVd3wy-ART48598-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/1na81dA4AEkvgMCoSpOIRP-ART48699-001-A/QRG.zip"
+                },
                 "FSL2": {
-                    "userManual": "https://cms.libreview.io/6fh2gPyVyVNrWCBYFmLjzs-ART47276-002/ART47276-002_rev-A-pub.zip",
-                    "quickStartGuide": "https://cms.libreview.io/6wKBLldUZzVvXR9wEhHz0n-ART48655-002/ART48655-002_rev-A-html.zip",
-                    "quickReferenceGuide": "https://cms.libreview.io/dEbQCTklHYT7XXPwbiSkE-ART48490-002/ART48490-002_rev-A-html.zip"
+                    "userManual": "https://cms.libreview.io/4YhzSdn02gukHHv56ndmiJ-ART47276-001-A/userManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/6YTA19WCxefXjYBZuR3R9x-ART48655-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/7f1RGPe9nQWSKA23No98IY-ART48490-001-A/QRG.zip"
                 },
                 "FSL3": {
-                    "userManual": "https://cms.libreview.io/2wqcKayZ1KPV8obY72CHSQ-ART48742-002/ART48742-002_rev-A-pub.zip",
-                    "quickStartGuide": "https://cms.libreview.io/5yfAcBKKJUjwhZPKm1Jdzo-ART48598-002/ART48598-002_rev-A-html.zip",
-                    "quickReferenceGuide": "https://cms.libreview.io/5BlA3QdA8uqKbYYUT2SE4F-ART48699-002/ART48699-002_rev-A-html.zip"
+                    "userManual": "https://cms.libreview.io/pDmlff34G6mGywrFer5Xq-ART48742-001-A/UserManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/77jWjkyiRxqNNAKIEVd3wy-ART48598-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/1na81dA4AEkvgMCoSpOIRP-ART48699-001-A/QRG.zip"
                 },
-                "safetyInfo": "https://cms.libreview.io/4c31pvIFNaKNDdqBwXuyrg-ART48427-002/ART48427-002_rev-A-html.zip",
-                "OSCompatibilityGuide": "https://cms.libreview.io/2ZV3N9mAE2C7Elkp1X4pYb-ART48719-002/ART48719-002_rev-A-pub.zip",
-                "sensorCompatibilityGuide": "https://cms.libreview.io/1w0Z8FFCenQoljv4yHWunF-ART44626-006/ART44626-006_rev-A.zip"
+                "safetyInfo": "https://cms.libreview.io/7urY1TjLj981ZL7hYQ5eM8-ART48427-001-A/SafetyInfo.zip",
+                "OSCompatibilityGuide": "https://cms.libreview.io/5CJhIpoErKYcL2NeqL94ey-ART44628-004-A/OSCompatibilityGuide.zip",
+                "sensorCompatibilityGuide": "https://cms.libreview.io/XoOwILxeAnDEokcqkWp5H-ART44626-006/sensorCompatibilityGuide.zip"
             }
         },
         "assistScreen": {
-            "foodCard": {},
-            "sensorCard": {},
             "actionButton": {
                 "typeInFoodBottomSheet": {
-                    "tryAgainModal": {}
+                    "title": "Type in your food",
+                    "tryAgainModal": {
+                        "body": "Our AI model doesn’t currently support languages other than English. Please type in your food in English and try again.",
+                        "title": "Try again in English"
+                    },
+                    "foodDescription": "Write a detailed description of your food"
                 }
             },
-            "captureImage": {},
             "emptyPastDay": {},
             "firstTimeUseCard": {},
             "analyzingFoodState": {},
-            "firstTimeEmptyCard": {},
-            "readyForNextMealCard": {}
+            "firstTimeEmptyCard": {}
         },
         "insightsTabs": {
             "daily": "Daily",
@@ -615,18 +636,7 @@
             "seconds": "Seconds"
         },
         "healthDetails": {
-            "weightSettingsBottomSheet": {
-                "pounds": "pounds",
-                "weight": "Weight",
-                "warningText": "<p><strong>WARNING:</strong> Be sure to enter your current weight. Your weight helps Dose Guidance understand your insulin needs.</p>",
-                "removeWeight": "Remove weight",
-                "warningDialogCta": "Turn OFF Dose Guidance",
-                "warningDialogTitle": "Weight outside range for Dose Guidance",
-                "warningDialogBodyOne": "If you save this weight, Dose Guidance will be turned OFF and will not suggest changes to your recommended daily dose.",
-                "warningDialogBodyTwo": "Only use Dose Guidance if your weight is between 60 and 440 pounds. If your weight is outside this range, contact your healthcare professional.",
-                "removingWeightDialogBody": "If you remove your weight, we will turn Dose Guidance OFF, and your Basal Cap will not receive changes to your daily dose.",
-                "removingWeightDialogTitle": "Removing weight disables Dose Guidance"
-            },
+            "weightSettingsBottomSheet": {},
             "dietaryPreferencesBottomSheet": {
                 "dietOptions": {}
             }
@@ -638,18 +648,25 @@
             "notify_spokenHi": "Out of range and high",
             "notify_spokenLo": "Out of range and low",
             "notify_spokenMgDl": "milligrams per deciliter",
+            "start_sensor_body": "Follow the steps in the app to start your sensor.",
             "notify_alarms_mgdl": "mg/dL",
             "notify_spokenMmolL": "millimoles per liter",
             "sensorReadyContent": "Sensor ready content",
+            "start_sensor_title": "Start your sensor \\u26A0\\uFE0F",
             "check_your_readings": "Open the app to check your readings",
+            "notify_alarms_mmoll": "mmol/L",
             "notify_sensor_error": "Notify Sensor error",
             "notify_sensor_ready": "Sensor Ready",
             "notify_spokenHi_alt": "Out of range and high",
             "notify_spokenLo_alt": "Out of range and low",
             "alarmsDisabledAuBlock": "Alarms have been disabled. Open the app for more information.",
+            "category_alarms_title": "Alarms",
             "category_alerts_title": "Alerts",
             "notify_sensor_expired": "Sensor Ended",
+            "str_results_hi_ketone": "Above 3.0 mmol/L",
             "category_glucose_title": "Glucose Alarms and System Alarms",
+            "notify_alarm_ketone_one": "High Ketones Alarm",
+            "notify_alarm_ketone_two": "Urgent High Ketones Alarm",
             "resultUrgentHighKetones": "Above 3.0 mmol/L",
             "alarmsDisabledAuNonBlock": "Adjust your phone settings to receive alarms.",
             "notify_alarm_low_glucose": "Low Glucose Alarm \\u26A0\\uFE0F",
@@ -674,6 +691,7 @@
             "notify_sensor_expires_in_1_hour": "Your Sensor will end in 1 hour",
             "notify_sensor_expires_in_3_days": "Your Sensor will end in 3 days",
             "notify_alarm_serious_low_glucose": "Urgent Low Glucose Alarm \\u26A0\\uFE0F",
+            "notify_alarm_signal_loss_msg_GKS": "Glucose and ketone alarms are not available",
             "notify_alarms_mgdl_accessibility": "milligrams per deciliter",
             "notify_alarms_check_blood_glucose": "Check Blood Glucose",
             "notify_sensor_error_terminated_msg": "Your Sensor is not working. Please remove your Sensor and start a new one.",
@@ -699,44 +717,13 @@
                 "help": "Help",
                 "About": "About",
                 "account": "Account",
-                "insulin": "Insulin",
-                "badgeNew": "New",
                 "eventLog": "Event Log",
                 "pageTitle": "Profile",
                 "appSettings": "App Settings",
-                "healthDetails": "Health Details",
-                "notifications": "Notifications",
-                "remindMeAfter": "Remind me after",
-                "turnOnMessage": "Turn ON to be notified if you may have missed a dose.",
                 "sessionExpired": "Session Expired",
                 "startNewSensor": "Start New Sensor",
                 "appNotConnected": "This app is no longer connected to your account and therefore some features are not available.",
-                "insulinSettings": "Insulin Settings",
-                "connectedDevices": "Connected Devices",
-                "shareMyHealthData": "Connected Apps",
-                "remindMeBottomSheetTitle": "Remind me when I haven't recorded a dose in the last:",
-                "longActingDoseReminderTitle": "Long-acting dose reminder"
-            },
-            "doseGuidanceSettings": {
-                "title": "Dose Guidance",
-                "statusOn": "On",
-                "important": "<p><strong>IMPORTANT:</strong> Dose Guidance will aim to bring your fasting and pre-meal glucose into the selected range. Discuss your glucose goal with your healthcare professional before making any changes.</p>",
-                "description": "When ON, Dose Guidance may change your recommended insulin doses based on recent glucose and dosing information.",
-                "glucoseGoal": "GLUCOSE GOAL",
-                "confirmAction": "Confirm",
-                "confirmHeading": "Confirm settings for",
-                "offWarningBody": "When OFF, Dose Guidance will not suggest changes to your recommended daily dose.",
-                "enterWeightError": "Only use Dose Guidance if your weight is between 60 and 440 pounds. If your weight is outside that range, contact your healthcare professional.",
-                "enterWeightLabel": "Weight",
-                "enterWeightTitle": "Enter your weight",
-                "offWarningHeading": "Are you sure you want to turn OFF Dose Guidance?",
-                "tightControlLabel": "Tight control",
-                "tightControlValue": "90 - 110 mg/dL",
-                "enterWeightWarning": "<p><strong>WARNING:</strong> Be sure to enter your current weight. Your weight helps Dose Guidance understand your insulin needs.</p>",
-                "standardControlLabel": "Standard control (default)",
-                "standardControlValue": "100 - 130 mg/dL",
-                "conservativeControlLabel": "Conservative control",
-                "conservativeControlValue": "110 - 140 mg/dL"
+                "shareMyHealthData": "Connected Apps"
             }
         },
         "ApplyNewSensor": {
@@ -759,11 +746,6 @@
         "assistTutorial": {
             "step1": {},
             "step2": {},
-            "step3": {
-                "aiWarningSection": {},
-                "glucoseImpactSection": {},
-                "medicalAdviceSection": {}
-            },
             "header": {}
         },
         "logbookAndNotes": {
@@ -794,178 +776,14 @@
             "referToPhoneAndOSCompGuideConfirmed": "Refer to the Phone and OS Compatibility Guide for the latest list of confirmed phones and operating systems."
         },
         "addBasalCapScreen": {
-            "exitSetup": {
-                "exitCta": "Exit setup",
-                "exitHeader": "Exit setup",
-                "continueCta": "Continue setup",
-                "exitWarning1": "If you exit now, you'll have 15 days to complete your Basal Cap setup. After that, you'll need to start over.",
-                "exitWarning2": "If you want to resume your setup later, you can do this in your Profile under Connected Devices.",
-                "inProgressCta": "Resume",
-                "inProgressNote": "Setup in progress. If not completed by {{ monthAndTime }}, you'll need to add the Basal Cap again.",
-                "inProgressTitle": "Libre Cap Basal",
-                "resumeSetupTitle": "Resume Basal Cap setup",
-                "resumeSetupMessage": "Do you want to start your setup from the beginning or pick up where you left off?",
-                "insulinDevicesTitle": "Insulin Devices",
-                "resumeSetupRestartCta": "Start from beginning",
-                "resumeSetupContinueCta": "Pick up where I left off"
-            },
+            "exitSetup": {},
             "takingADose": {
-                "question1": "To confirm a dose was recorded, what would you expect to see on the Basal Cap screen?",
-                "question2": "When does the Basal Cap record a dose?",
-                "question3": "If you take a dose that is different than what is shown on the Basal Cap, where do you go in your app to update this dose amount?",
-                "logbookBody": "Go to your logbook (in your app under Insights) to view your recorded doses.\nThe dose shown on the Basal Cap is the amount that gets recorded in the logbook. If you take a dose that is different than what got recorded, you can update it in your logbook.",
-                "logbookTitle": "Keep your logbook up to date",
-                "wrongAnswer1": "<p>The Basal Cap shows you how long it's been since the last dose was recorded.</p>\n<p>Seeing <strong>0 hr </strong>and<strong> 0 min</strong> means you just recorded a dose. A dose is recorded when the Basal Cap is placed back on the pen.</p>",
-                "wrongAnswer2": "<p>A dose is recorded every time you put the Basal Cap back on the pen after 10 seconds. Listen for a 'click' to be sure the Basal Cap is all the way on the pen.</p>",
-                "wrongAnswer3": "If you take a different dose than what the Basal Cap recommends, go to Insights in your app to update the logbook.\nDose Guidance uses your dosing information to recommend changes to your Daily dose. So, it's important to keep your logbook up to date.",
-                "correctAnswer1": "<p>Seeing <strong>0 hr </strong>and<strong> 0 min</strong> means you just recorded a dose. A dose is recorded when the Basal Cap is placed back on the pen.</p>",
-                "correctAnswer2": "A dose is recorded every time you put the Basal Cap back on the pen after 10 seconds. Listen for a 'click' to be sure the Basal Cap is all the way on the pen.",
-                "correctAnswer3": "If you take a different dose than what the Basal Cap recommends, go to Insights in your app to update the logbook. \nDose Guidance uses your dosing information to recommend changes to your daily dose. So, it's important to keep your logbook up to date.",
-                "doNotTakeADose": "Do not take a dose",
-                "howToTakeADose": "How you will take a dose",
-                "question1Option1": "12 hr 5 min",
-                "question1Option2": "5 hr 23 min",
-                "question1Option3": "20 hr 44 min",
-                "question1Option4": "0 hr 0 min",
-                "question2Option1": "When the Basal Cap is taken off the pen",
-                "question2Option2": "When you put the Basal Cap back on the pen after 10 seconds",
-                "question3Option1": "Home",
-                "question3Option2": "Insights",
-                "question3Option3": "Alarms",
-                "question3Option4": "Profile",
-                "wrongAnswerTitle": "That’s not correct",
-                "doNotTakeADoseCta": "I understand",
-                "keepAppSyncedBody": "<p>If you see <SyncIcon />, your Basal Cap has information to send to your Libre app.</p>\n<p>Bring your phone within 20 feet of your Basal Cap. Then, press the button on the cap so it can communicate with your app.</p>\n<p><strong>TIP:</strong> Keep your phone near your Basal Cap when you take a dose so the dose gets logged in your app right away.</p>",
-                "correctAnswerTitle": "That's right",
-                "doNotTakeADoseBody": "We'll show you how to use your Basal Cap, but you won't take a dose during this tutorial.",
-                "howToTakeADoseBody": "<ol><li index=\"1\"><p>Check the time since last dose</p></li><li index=\"2\"><p>View the daily dose amount</p></li><li index=\"3\"><p>Take the dose and put the Basal Cap back on the pen</p></li></ol>\n<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>\n",
-                "keepAppSyncedTitle": "Keep your app and Basal Cap synced",
-                "keepAppSyncedBodyDark": "<p>If you see <SyncIconDark />, your Basal Cap has information to send to your Libre app.</p>\n<p>Bring your phone within 20 feet of your Basal Cap. Then, press the button on the cap so it can communicate with your app.</p>\n<p><strong>TIP:</strong> Keep your phone near your Basal Cap when you take a dose so the dose gets logged in your app right away.</p>",
-                "howToTakeADoseBodyNote": "<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>",
-                "howToTakeADoseListItem1": "Check the time since last dose",
-                "howToTakeADoseListItem2": "View the daily dose amount",
-                "howToTakeADoseListItem3": "Take the dose and put the Basal Cap back on the pen",
-                "takingADoseTakingADoseVideo": "https://cms.libreview.io/videos/2LB8Sgpd91H2Ymn4gLNLfR/en-US/takingADoseVideo.mp4"
+                "howToTakeADoseBody": "<ol><li index=\"1\"><p>Check the time since last dose</p></li><li index=\"2\"><p>View the daily dose amount</p></li><li index=\"3\"><p>Take the dose and put the Basal Cap back on the pen</p></li></ol>\n<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>\n"
             },
-            "doseGuidance": {
-                "answerBody": "The Dose Guidance feature may suggest a change to your recommended daily dose amount.",
-                "endScreenBody": "We'll now help you set up your Basal Cap.",
-                "endScreenTitle": "Congrats",
-                "questionOption1": "It may suggest an increase or decrease to my recommended daily dose amount",
-                "questionOption2": "It will tell me when to take my long-acting insulin",
-                "answerTitleWrong": "That’s not correct",
-                "doseGuidanceBody": "<p>Dose Guidance helps you manage your long-acting insulin doses. It may suggest changes to your recommended daily dose amount. </p>\n<p><strong>WARNING:</strong> If you are pregnant, turn off Dose Guidance and consult your healthcare professional.</p>",
-                "learningComplete": "Learning complete",
-                "doseGuidanceTitle": "Dose Guidance",
-                "answerTitleCorrect": "That's right",
-                "doseGuidanceQuestion": "How does Dose Guidance help you manage your long-acting insulin doses?",
-                "doseGuidanceDoseGuidanceVideo": "https://cms.libreview.io/videos/70u7ewtUCtk60TLQEOwMeB/en-US/doseGuidanceVideo.mp4"
-            },
-            "knowledgeCheck": {
-                "title": "Check Your Knowledge",
-                "duration": "5 min",
-                "tryAgain": "Try Again",
-                "thatsRight": "That's right",
-                "thatsNotCorrect": "That's not correct",
-                "checkCompleteTitle": "Knowledge check complete\n",
-                "questionOneContent": "You get a notification that it may be time to take a dose. What should you do next?",
-                "questionSixContent": "How often should you review the recommended daily dose on your basal cap?",
-                "questionTwoContent": "What might the basal cap show when it's time to take a dose?",
-                "questionFiveContent": "The basal cap recommended a daily dose of 20 units, but you only took 10 units. Where in the app should you go to update the logbook to show the dose you took?",
-                "questionFourContent": "When you put the basal cap back on the pen after taking a dose, what dose amount is automatically recorded in the app logbook?",
-                "questionSixResponse": "Since your recommended daily dose amount can change, always check the basal cap before taking a long-acting insulin dose.",
-                "questionTwoResponse": "<p>Since most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.</p>\n<p>\nRemember that the basal cap counts UP to the time to take a dose, which is around 24 hours.</p>",
-                "checkCompleteContent": "You’re ready to connect your basal cap",
-                "questionFiveResponse": "If you take a different dose than what your basal cap recommends, make sure to record the actual dose you took under Insights in the app.",
-                "questionFourResponse": "Every time you put the basal cap back on the pen after 10 seconds, a dose is recorded. The daily dose amount shown on the Basal Cap gets recorded.",
-                "questionOneOptionOne": "Take a dose right away",
-                "questionOneOptionTwo": "Skip a dose",
-                "questionSixOptionOne": "Every day before I take a dose",
-                "questionSixOptionTwo": "Once a week",
-                "questionThreeContent": "How do you check your recommended daily dose on the basal cap?",
-                "questionTwoOptionOne": "1 hr 10 min",
-                "questionTwoOptionTwo": "24 hr 15 min",
-                "questionFiveOptionOne": "Home",
-                "questionFiveOptionTwo": "Insight",
-                "questionFourOptionOne": "The dose amount you dialed on your pen",
-                "questionFourOptionTwo": "The recommended daily dose shown on the basal cap",
-                "questionThreeResponse": "Always press the button on the Basal Cap to view your recommended daily dose amount before taking your long-acting insulin each day. ",
-                "questionTwoOptionFour": "10 hr 35 min",
-                "questionFiveOptionFour": "Profile",
-                "questionOneOptionThree": "See how long it’s been since your last dose",
-                "questionSixOptionThree": "Once a month",
-                "questionThreeOptionOne": "The Basal Cap does not show a recommended daily dose",
-                "questionThreeOptionTwo": "Press the button on the Basal Cap",
-                "questionTwoOptionThree": "0 hr 0 min",
-                "questionFiveOptionThree": "Alarms",
-                "questionOneRightContent": "Remember to press the button on your basal cap to check the time since your last dose before you take a dose.",
-                "questionOneWrongContent": "Remember to press the button on your basal cap to check the time since your last dose before you take a dose.",
-                "questionThreeOptionThree": "Take the Basal Cap off the pen"
-            },
-            "dailyDoseAmount": {
-                "question1": "Based on the screen above:\nWhat is the recommended daily dose amount of long-acting insulin?",
-                "rightAnswerBody": "<p><strong>IMPORTANT:</strong> Always check your Basal Cap for the recommended daily dose amount before taking your long-acting insulin each day.</p>",
-                "wrongAnswerBody": "<p>Check the screen above. The number of units shown is the recommended daily dose amount of long-acting insulin.</p>\n<p><strong>IMPORTANT:</strong> Always check your Basal Cap for the recommended daily dose amount before taking your long-acting insulin each day.</p>",
-                "question1Option1": "32 units",
-                "question1Option2": "17 units",
-                "question1Option3": "23 units",
-                "question1Option4": "5 units",
-                "rightAnswerHeader": "That's right",
-                "wrongAnswerHeader": "That’s not correct",
-                "dailyDoseAmountBody": "After you confirm it's time to take a long-acting insulin dose, you’ll press the button again to see the recommended daily dose amount.",
-                "dailyDoseAmountTitle": "Daily dose amount",
-                "dailyDoseAmountDailyDoseAmountVideo": "https://cms.libreview.io/videos/2b6v97UJMVjTUODgQ9sOJO/en-US/dailyDoseAmountVideo.mp4"
-            },
-            "addBasalCapScreenSet": {
-                "title": "Learn how to use your Basal Cap",
-                "replay": "Replay",
-                "warning": "<p><strong>IMPORTANT:</strong> Do not take an insulin dose while learning or setting up the Basal Cap.</p>",
-                "subtitle": "We'll walk you through how to use and set up your Basal Cap.",
-                "step1Time": "10 min",
-                "step2Time": "2 min",
-                "step3Time": "5 min",
-                "step4Time": "2 min",
-                "getStarted": "Get started",
-                "thatsRight": "That's right",
-                "serverError": "Error communicating with the server.",
-                "wrongAnswer1": "Remember your timer counts up from 0 to 24 hours, so it would be too soon to take a dose.\nSince most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.",
-                "wrongAnswer2": "It likely would be time to take a dose.\nSince most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.",
-                "libreCapBasal": "The Libre Cap Basal",
-                "setupBasalCap": "Set up your Basal Cap",
-                "correctAnswer1": "It would be too soon to take a dose.",
-                "correctAnswer2": "It likely would be time to take a dose.",
-                "letsGetStarted": "Let's get started",
-                "thatsNotCorrect": "That’s not correct",
-                "dailyDoseOption1": "Yes, it would be time to take a dose",
-                "dailyDoseOption2": "No, it would not be time to take a dose",
-                "dailyDoseQuestion": "Based on the screen above: \nWould it be time to take your daily dose of long-acting insulin?",
-                "errorLoadingVideo": "Error Loading Video",
-                "libreCapBasalBody": "An easy way to adjust and manage your long-acting insulin doses.",
-                "timeSinceLastDose": "Time since last dose",
-                "checkYourKnowledge": "Check your knowledge",
-                "leaveBasalCapInBox": "Leave your Basal Cap in the box",
-                "connectYourBasalCap": "Connect your Basal Cap",
-                "errorLoadingVideoBody": "Please check your internet connection and try again.",
-                "leaveBasalCapInBoxCta": "I understand",
-                "timeSinceLastDoseBody": "<p>You'll press the button on the Basal Cap once to see the timer. The timer counts up from 0 to 24 hours to help you remember when you last recorded a dose and to decide if it's time to take your next dose.</p>\n<p><strong>NOTE:</strong> Since most long-acting insulins are taken around the same time every day, the time since your last dose should be close to 24 hours.</p>",
-                "leaveBasalCapInBoxBody": "First, you'll be learning more about the Basal Cap. We'll let you know when it's time to take your Basal Cap out of the box and set it up.",
-                "timeToTakeYourDailyDose": "Based on the screen above:\n\nWould it be time to take your daily dose of long-acting insulin?",
-                "addBasalCapScreenSetAddBasalCapVideo": "https://cms.libreview.io/videos/426flUEYWa8BJzCvM8Xw0b/en-US/addBasalCapVideo.mp4",
-                "addBasalCapScreenSetTimeSinceLastDoseVideo": "https://cms.libreview.io/videos/5OgXEMtVAohNb6JgkksF3g/en-US/timeSinceLastDoseVideo.mp4",
-                "addBasalCapScreenSetAddBasalCapToInsulinPenVideo": "https://cms.libreview.io/videos/4mM9dL2S4A3cj40gFXZsI4/en-US/addBasalCapToInsulinPenVideo.mp4"
-            },
-            "longactingDoseReminder": {
-                "question": "If you get this notification, what should you do?",
-                "answerBody": "<p>Before taking a dose, <strong>always check the Basal Cap</strong> to confirm the time since last dose.</p>",
-                "questionOption1": "Check my Basal Cap to confirm the time since last dose",
-                "questionOption2": "Take a long-acting dose",
-                "questionOption3": "Ignore it",
-                "rightAnswerHeader": "That's right",
-                "wrongAnswerHeader": "That’s not correct",
-                "longactingDoseReminderBody": "<p>The app will let you know if you may have missed recording a dose of long-acting insulin.</p>\n<p><strong>IMPORTANT:</strong> When you get the notification in the app, <strong>always check the Basal Cap</strong> to confirm the time since last dose.</p>",
-                "longactingDoseReminderTitle": "Long-acting dose reminder",
-                "longactingDoseReminderLongactingDoseReminderVideo": "https://cms.libreview.io/videos/3XuilbDNG6UVSdfivp8rGM/en-US/longactingDoseReminderVideo.mp4"
-            }
+            "doseGuidance": {},
+            "dailyDoseAmount": {},
+            "addBasalCapScreenSet": {},
+            "longactingDoseReminder": {}
         },
         "alarmsUnavailable": {
             "openSettings": "Open Settings",
@@ -1036,11 +854,14 @@
             "insights": "Insights"
         },
         "startTutorialScreen": {
-            "startTutorialSet": {}
+            "startTutorialSet": {
+                "body": "Looks like this is your first time using a sensor that supports ketone monitoring. We’ll walk you through how to use it in the following tutorial.",
+                "title": "Learn about your new {{ sensorName }}",
+                "startSensor": "Start {{ sensorName }}",
+                "learnAboutMonitoring": "Learn about Ketone Monitoring"
+            }
         },
         "InsightsDailySummary": {
-            "glucoseGraph": {},
-            "ketonesGraph": {},
             "insightsDailySummaryScreen": {
                 "title": "Not enough Sensor data",
                 "loading": "Loading...",
@@ -1103,18 +924,7 @@
                 "privacyNotice": "Privacy Notice"
             }
         },
-        "connectedDevicesScreen": {
-            "endsOn": "Ends on {{ value }}",
-            "sensor": "Sensor",
-            "basalCap": "Libre Cap Basal",
-            "basalCapVideos": "Libre Cap Basal Videos",
-            "insulinDevices": "Insulin Devices",
-            "addInsulinDevice": "Add insulin device",
-            "putBasalCapOnPen": "Put Basal Cap on pen",
-            "timeSinceLastDose": "Time since last dose",
-            "basalSystemOverview": "Basal system overview",
-            "putBasalCapOnPenBody": "Remove and discard the cap that came on your insulin pen. Insert the pen into the Basal Cap and listen for a \"click.\" Leave the Basal Cap ON your pen. Only take it OFF to take a dose."
-        },
+        "connectedDevicesScreen": {},
         "howToScanIosScanButton": {
             "scanButtonIos": {
                 "body": "Tap the scan button before scanning your Sensor.",
@@ -1122,24 +932,59 @@
             }
         },
         "onboardingTutorialSteps": {
-            "header": {},
-            "gksTutorialAlarms": {},
-            "gksTutorialMakeAPlan": {},
-            "gksTutorialHighKetones": {},
-            "gksTutorialTrendArrows": {},
-            "gksTutorialKetoneRanges": {},
-            "gksTutorialNormalKetones": {},
-            "gksTutorialElevatedKetones": {},
-            "gksTutorialGlucoseAndKetones": {}
+            "header": {
+                "ketoneMonitoring": "Ketone Monitoring"
+            },
+            "gksTutorialAlarms": {
+                "body": "Ketone alarms will notify you when your ketones have risen above a certain level.",
+                "title": "Ketone alarms"
+            },
+            "gksTutorialMakeAPlan": {
+                "body": "Continuously monitoring ketones can help you avoid a life-threatening condition called diabetic ketoacidosis (DKA). Talk with your healthcare professional about what to do if you have elevated or high ketones.",
+                "title": "Make a plan"
+            },
+            "gksTutorialHighKetones": {
+                "body": "<p>If your ketones are <strong>above {{ value }} {{ uom }}</strong>, your high ketone value will be on a red banner above a ketone graph.</p><br /><p>Follow the plan you made with your healthcare professional. </p>",
+                "title": "High ketones"
+            },
+            "gksTutorialTrendArrows": {
+                "body": "A trend arrow shows the direction where your elevated or high ketone value is headed. It could be rising, changing slowly, or falling.",
+                "title": "Ketone trend arrow",
+                "rising": "Rising",
+                "falling": "Falling",
+                "changingSlowly": "Changing slowly"
+            },
+            "gksTutorialKetoneRanges": {
+                "body": "Your app informs you if your ketones are normal, elevated, or high. Your ketone range determines the background color of your ketone information.",
+                "title": "Ketone ranges",
+                "highKetonesLabel": "High Ketones (above {{ value }} {{ uom }})",
+                "normalKetonesLabel": "Normal Ketones (below {{ value }} {{ uom }})",
+                "elevatedKetonesLabel": "Elevated Ketones ({{ value1 }} to {{ value2 }} {{ uom }})"
+            },
+            "gksTutorialNormalKetones": {
+                "body": "<p>If your ketones are <strong>below {{ value }} {{ uom }}</strong>, “Normal Ketones” will be on a green banner.</p>",
+                "title": "Normal ketones"
+            },
+            "gksTutorialElevatedKetones": {
+                "body": "<p>If your ketones are between <strong>{{ value1 }} to {{ value2 }} {{ uom }}</strong>, your elevated ketone value will be on a yellow banner above a ketone graph.</p><br /><p>Follow the plan you made with your healthcare professional.</p>",
+                "title": "Elevated ketones"
+            },
+            "gksTutorialGlucoseAndKetones": {
+                "body": "Your app home page will display both glucose and ketone information. You will be able to tap on the ketone banner or swipe up to view your ketone information.",
+                "title": "Glucose and ketones"
+            }
         },
         "tutorialCompletedScreen": {
-            "tutorialCompleteSet": {}
+            "tutorialCompleteSet": {
+                "body": "You’ve completed the tutorial and are now ready to scan your ketone sensor again to activate it."
+            }
         },
         "SystemOnboardingAllowBle": {
             "allowBlePersmissions": {
-                "body": "The app needs permission to connect with your Sensor via Bluetooth.\n\nIn order to complete setup, receive glucose readings and alarms, you must allow this permission from your phone settings.",
+                "body": "The app needs permission to connect with your sensor via Bluetooth.\n\nIn order to complete setup, receive readings and alarms, you must allow this permission from your phone settings.",
                 "title": "Allow App Permissions",
-                "bodyAndroid": "The app needs Nearby Devices permission to connect with your Sensor.\n\nIn order to complete setup, receive glucose readings and alarms, you must allow this permission from your phone settings."
+                "bodyAndroid": "The app needs Nearby Devices permission to connect with your Sensor.\n\nIn order to complete setup, receive glucose readings and alarms, you must allow this permission from your phone settings.",
+                "openSettings": "Open settings"
             }
         },
         "timeInRangesReportScreen": {
@@ -1194,20 +1039,16 @@
                 "title": "Wash Site"
             }
         },
-        "AllowPermissionsOnboarding": {
-            "permissionsScreen": {
-                "allowPermissionsScreen": {}
-            }
-        },
         "SystemOnboardingYourAlarms": {
             "yourAlarmsScreen": {
                 "title": "Alarms",
-                "subtitle": "Let's get your phone set up for glucose alarms."
+                "alarms": "Alarms",
+                "subtitle": "Let's get your phone set up for alarms."
             }
         },
         "alarmsUnavailableBLEAccess": {
             "BLEAccessDisabledScreen": {
-                "body": "The app needs permission to connect with your Sensor via Bluetooth.\n\nIn order to receive glucose readings and alarms, allow this permission from your phone settings.",
+                "body": "The app needs permission to connect with your Sensor via Bluetooth.\n\nIn order to receive readings and alarms, allow this permission from your phone settings.",
                 "title": "App Permission Required"
             }
         },
@@ -1275,7 +1116,7 @@
         "sensorActivationNotification": {
             "notfiy_foreground_service_msg": "Libre %1$@ Sensor",
             "NSBluetoothAlwaysUsageDescription": "{{ shortAppName }} uses Bluetooth to receive data from Sensors.",
-            "notfiy_foreground_service_content": "Tap to view your current glucose"
+            "notfiy_foreground_service_content": "Tap to view your current readings"
         },
         "SystemOnboardingGlucoseColors": {
             "glucoseColorsScreen": {
@@ -1328,7 +1169,7 @@
             "checkYourAudioScreen": {
                 "title": "Check Your Audio",
                 "bodyCopy": "Check your audio connections so you know which device will play alarms.",
-                "bodyCopy2": "If your phone is connected to accessories such as a smartwatch, headphones or speakers, it may impact your ability to receive alarms. Disconnect your audio device when not in use."
+                "bodyCopy2": "If your phone is connected to headphones or speakers, it may impact your ability to receive alarms.\nDisconnect your audio device when not in use."
             }
         },
         "SystemOnboardingCurrentGlucose": {
@@ -1401,7 +1242,7 @@
                 "title": "Unit of Measurement",
                 "description": "Your glucose unit of measurement is automatically set based on your country.",
                 "yourCountry": "Your country is",
-                "yourUnitOfMeasurement": "Your unit of measurement is"
+                "yourUnitOfMeasurement": "Your glucose unit of measurement is"
             }
         },
         "alarmUnavailableCriticalAlertsOff": {
@@ -1495,13 +1336,13 @@
         },
         "alarmsUnavailableNearbyDeviceAccess": {
             "NearbyDeviceAccessDisabledScreen": {
-                "body": "The app needs Nearby Devices permission to connect with your Sensor.\n\nIn order to receive glucose readings and alarms, allow this permission from your phone settings.",
+                "body": "The app needs permission to connect with your Sensor via Bluetooth.\n\nIn order to receive readings and alarms, allow this permission from your phone settings.",
                 "title": "App Permission Required"
             }
         },
         "systemOnboardingNotCompatibleScreen": {
             "generic": {
-                "body": "Unfortunately, your phone or operating system is NOT compatible with this app. You will not receive glucose readings or alarms."
+                "body": "Unfortunately, your phone or operating system is NOT compatible with this app. You will not receive readings or alarms."
             }
         },
         "SystemOnboardingReceiveGlucoseAlarms": {
@@ -1512,12 +1353,12 @@
         },
         "systemOnboardingCNCOSNotTestedScreen": {
             "OSNotTested": {
-                "body": "Compatibility of your operating system with this app has NOT been confirmed. Some app features (such as glucose alarms) MAY not be supported."
+                "body": "Compatibility of your operating system with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingOSNotCompatibleScreen": {
             "OSNotCompatible": {
-                "body": "Unfortunately, your operating system is NOT compatible with this app. You will not receive glucose readings or alarms."
+                "body": "Unfortunately, your operating system is NOT compatible with this app. You will not receive readings or alarms."
             }
         },
         "tutorialApplyFSL2LiftSensorApplicator": {
@@ -1556,12 +1397,12 @@
         },
         "systemOnboardingCNCPhoneNotTestedScreen": {
             "phoneNotTested": {
-                "body": "Compatibility of your phone with this app has NOT been confirmed. Some app features (such as glucose alarms) MAY not be supported."
+                "body": "Compatibility of your phone with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingPhoneNotCompatibleScreen": {
             "phoneNotCompatible": {
-                "body": "Unfortunately, your phone is NOT compatible with this app. You will not receive glucose readings or alarms."
+                "body": "Unfortunately, your phone is NOT compatible with this app. You will not receive readings or alarms."
             }
         },
         "tutorialApplyFSL2PrepareSensorApplicator": {
@@ -1572,7 +1413,7 @@
         },
         "systemOnboardingCNCCountryNotTestedScreen": {
             "countryNotTested": {
-                "body": "Compatibility of your device with this app has NOT been confirmed. Some app features (such as glucose alarms) MAY not be supported."
+                "body": "Compatibility of your device with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingCountryConfirmationScreen": {
@@ -1586,7 +1427,7 @@
         },
         "systemOnboardingCountryNotSupportedScreen": {
             "CountryNotSupported": {
-                "body": "Unfortunately, this version of the app is NOT supported in your country. You will not receive glucose readings or alarms."
+                "body": "Unfortunately, this version of the app is NOT supported in your country. You will not receive readings or alarms."
             }
         },
         "systemOnboardingCarbohydrateSettingsScreen": {
@@ -1607,24 +1448,32 @@
         },
         "systemOnboardingCNCApplicationNotTestedScreen": {
             "applicationNotTested": {
-                "body": "A new app version is available. Please update your app. Some app features (such as glucose alarms) MAY not be supported."
+                "body": "A new app version is available. Please update your app. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingApplicationNotCompatibleScreen": {
             "applicationNotCompatible": {
-                "body": "Unfortunately, this version of the app is NOT compatible. You will not receive glucose readings or alarms. Please update your app."
+                "body": "Unfortunately, this version of the app is NOT compatible. You will not receive readings or alarms. Please update your app."
             }
         },
         "systemOnboardingCompatibilityNotConfirmedScreen": {
             "generic": {
-                "body": "Compatibility of your phone or operating system with this app has NOT been confirmed. Some app features (such as glucose alarms) MAY not be supported."
+                "body": "Compatibility of your phone or operating system with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         }
     },
-    "sp": {
+    "ES": {
         "Home": {
             "graph": {},
-            "ketoneBanner": {},
+            "ketoneBanner": {
+                "hi": "HI",
+                "ketones": "Cetonas",
+                "belowValue": "Por debajo de {{ value }} {{ uom }}",
+                "highKetones": "Cetonas altas",
+                "normalKetones": "Cetonas normales",
+                "elevatedKetones": "Cetonas elevadas",
+                "highKetonesOutOfRange": "Cetonas altas (fuera de rango)"
+            },
             "glucoseBanner": {
                 "hi": "HI",
                 "lo": "LO",
@@ -1639,17 +1488,23 @@
             },
             "noActiveSensor": {},
             "sensorStarting": {
-                "sensorReadyIn": "El sensor estará listo en:"
+                "sensorReadyIn": "Su sensor estará listo en:"
             },
             "sensorErrorBanner": {
                 "signalLoss": "Pérdida de señal",
                 "sensorError": "Error del sensor",
                 "bluetoothOff": "Bluetooth desactivado",
+                "ketonePaused": "Lecturas de cetonas pausadas",
                 "sensorTooHot": "Sensor muy caliente",
                 "glucosePaused": "Lecturas de glucosa en pausa",
                 "sensorTooCold": "Sensor muy frío"
             },
-            "sensorSupportsSet": {},
+            "sensorSupportsSet": {
+                "sensorSupports": "SENSOR SUPPORTS",
+                "multipleDevices": "Multiple devices",
+                "ketoneMonitoring": "Ketone monitoring and alarms",
+                "glucoseMonitoring": "Glucose monitoring and alarms"
+            },
             "ketonesErrorBanner": {},
             "sensorWearDuration": {
                 "daysUntilSensorEnds": "Día hasta que termine el sensor",
@@ -1659,7 +1514,11 @@
                 "hoursUntilSensorEnds_plural": "Horas hasta que termine el sensor",
                 "minutesUntilSensorEnds_plural": "Minutos hasta que termine el sensor"
             },
-            "multipleDeviceBottomSheet": {}
+            "multipleDeviceBottomSheet": {
+                "title": "Varios dispositivos",
+                "subTitle": "Lecturas en un dispositivo adicional",
+                "description": "Este sensor admite lecturas en múltiples dispositivos. Los dispositivos adicionales deben añadirse dentro de las 24 horas de iniciar su sensor."
+            }
         },
         "unit": {
             "mg": "mg",
@@ -1676,16 +1535,21 @@
                 "sound": "Sonido",
                 "custom": "Personalizado",
                 "silent": "Silencio",
+                "mmolVal": "{{ value }} mmol/L",
+                "alarmCap": "ALARM",
+                "soundCap": "SOUND",
                 "standard": "Estándar",
                 "silentMode": {
                     "title": "Modo Silencio",
                     "description": "Envía alarmas de glucosa y de pérdida de señal sin sonido durante un período especificado.",
+                    "descriptionGKS": "Envía alarmas de glucosa, cetona, y de pérdida de señal sin sonido durante un período especificado.",
                     "alarmsSilencedFor": "Las alarmas se silenciarán durante:"
                 },
                 "systemAlarms": {
                     "title": "Alarmas del sistema",
                     "signalLossAlarmDesc": "Recibe una Alarma de pérdida de señal cuando no estén disponibles las alarmas de glucosa porque el sensor no se está comunicando con la aplicación.",
-                    "signalLossAlarmTitle": "Alarma de pérdida de señal"
+                    "signalLossAlarmTitle": "Alarma de pérdida de señal",
+                    "signalLossAlarmDescGKS": "Reciba una alarma de pérdida de señal cuando no estén disponibles las alarmas de glucosa y cetona porque el sensor no se está comunicando con la aplicación."
                 },
                 "glucoseAlarms": {
                     "title": "Alarmas de glucosa",
@@ -1698,13 +1562,20 @@
                 "alarmAboveLabel": "Cuando la glucosa sube por encima de",
                 "alarmBelowLabel": "Cuando la glucosa desciende por debajo de",
                 "overrideDNDDesc": "ACTIVE esta opción si desea que la alarma siempre emita un sonido, incluso si su teléfono está en modo de silencio o No molestar.",
-                "ketonesAlarmsSet": {},
+                "ketonesAlarmsSet": {
+                    "title": "KETONE ALARMS",
+                    "aboveValue": "Above {{ value }} {{ uom }}",
+                    "ketonesAbove": "When ketones go above",
+                    "ketonesAlarm1": "High Ketones Alarm",
+                    "ketonesAlarm2": "Urgent High Ketones Alarm",
+                    "ketonesAlarm1Desc": "Esta alarma está ACTIVADA y no se puede modificar.",
+                    "ketonesAlarm2Desc": "Esta alarma está ACTIVADA y no se puede modificar."
+                },
                 "overrideDNDLabel": "Anular No molestar",
                 "alarmToneDescription": "Seleccione el sonido para esta alarma. Las alarmas respetarán la configuración de volumen y vibración de su teléfono.",
                 "overrideDNDAlwaysOnDesc": "Esta alarma siempre emitirá un sonido, incluso si su teléfono está en modo de silencio o si está activado No molestar."
             }
         },
-        "assist": {},
         "common": {
             "no": "No",
             "of": "de",
@@ -1734,16 +1605,11 @@
             "tryAgain": "Inténtelo nuevamente",
             "learnMore": "Más información",
             "hrsWithCount": "{{ count }} h",
-            "ariaPlayVideo": "Play video",
             "createAccount": "Crear cuenta",
             "daysWithCount": "{{ count }} día",
             "minsWithCount": "{{ count }} min",
-            "ariaPauseVideo": "Pause video",
             "hoursWithCount": "{{ count }} hora",
             "minutes_plural": "minutos",
-            "ariaReplayVideo": "Replay video",
-            "ariaRewindVideo": "Rewind video",
-            "ariaForwardVideo": "Fast forward video",
             "minutesWithCount": "{{ count }} minuto",
             "maxCharacterLimitN": "Max character limit is {{ value }}",
             "hrsWithCount_plural": "{{ count }} h",
@@ -1760,7 +1626,6 @@
                 "body": "El indicador del control de glucosa utiliza datos promedio de la glucosa del sensor. El GMI puede utilizarse como indicador de qué tan bien se han controlado sus niveles de glucosa.\n\nNota: El GMI necesita al menos 5 días de datos de glucosa.",
                 "title": "Indicador de control de glucosa (GMI)"
             },
-            "deleteFood": {},
             "NFCDisabled": {
                 "body": "Para poder usar esta aplicación, NFC debe estar activado en su teléfono. ¿Desea activarlo?",
                 "title": "NFC desactivado"
@@ -1772,13 +1637,14 @@
                 "body": "Para usar la aplicación, debe aceptar ambos avisos tocando en ambas casillas de verificación."
             },
             "selectSensor": {
+                "gks": "{{ sensorName }} Sensors",
                 "fsl2": "Sensores de Libre 2",
                 "fsl3": "Sensores de Libre 3",
                 "title": "Seleccionar tipo de sensor"
             },
             "glucoseBanner": {
                 "lowGlucose": "La glucosa baja puede ser peligrosa. Siga el tratamiento recomendado por su profesional de la salud.",
-                "highGlucose": "La glucosa muy alta puede ser peligrosa. Siga el tratamiento recomendado por su profesional de la salud. Considere verificar su nivel de cuerpos cetónicos.",
+                "highGlucose": "Los niveles muy altos de glucosa pueden ser peligrosos. Siga el tratamiento recomendado por su profesional de la salud. Considere también verificar sus niveles de cetonas.",
                 "checkGlucose": {
                     "doGlucoseTest": "Realice una prueba de glucosa en la sangre antes de tomar decisiones relacionadas con el tratamiento.",
                     "checkBloodGlucose": "Verificar glucosa en sangre"
@@ -1786,15 +1652,20 @@
                 "glucoseGoingLow": "La glucosa baja puede ser peligrosa. Siga el tratamiento recomendado por su profesional de la salud.",
                 "glucoseGoingHigh": "Los niveles muy altos de glucosa pueden ser peligrosos. Siga el tratamiento recomendado por su profesional de la salud. Considere también verificar sus niveles de cetonas.",
                 "lowGlucoseOutOfRange": "La glucosa baja puede ser peligrosa. Confirme su glucosa y realice el tratamiento recomendado por su profesional de la salud.",
-                "highGlucoseOutOfRange": "La glucosa muy alta puede ser peligrosa. Confirme su glucosa y realice el tratamiento recomendado por su profesional de la salud. Considere verificar su nivel de cuerpos cetónicos."
+                "highGlucoseOutOfRange": "Los niveles muy altos de glucosa pueden ser peligrosos. Siga el tratamiento recomendado por su profesional de la salud. Considere también verificar sus niveles de cetonas."
             },
-            "ketonesAlarm1": {},
-            "ketonesAlarm2": {},
+            "ketonesAlarm1": {
+                "title": "Alarma",
+                "description": "Reciba una alarma de cetonas altas cuando las cetonas superen este valor."
+            },
+            "ketonesAlarm2": {
+                "title": "Alarma",
+                "description": "Reciba una alarma de cetonas altas cuando las cetonas superen este valor."
+            },
             "deleteEntrySet": {
                 "body": "¿Está seguro de que desea borrar definitivamente la entrada del libro de registro?",
                 "title": "Borrar entrada"
             },
-            "noActiveSensor": {},
             "reportSettings": {
                 "title": "Configuración de informes",
                 "description": "El rango deseado de glucosa se mostrará en distintos gráficos. Si no sabe cuál es, pregunte a su profesional de la salud.\n\nNota: La configuración de rango deseado de glucosa no configurará los niveles de las alarmas de glucosa."
@@ -1804,7 +1675,8 @@
                 "title": "El modo Silencio está ACTIVADO",
                 "turnOffButton": "Desactivar",
                 "alarmsBannerBody": "El modo Silencio está activado y sus alarmas de glucosa y de pérdida de señal se han silenciado.\n\nSi desea recibir alarmas con sonido, debe desactivar el modo Silencio.",
-                "alarmsSettingBody": "No puede personalizar sus alarmas mientras tenga el modo Silencio activado. \n\nSi desea personalizar sus alarmas, debe desactivar el modo Silencio."
+                "alarmsSettingBody": "No puede personalizar sus alarmas mientras tenga el modo Silencio activado. \n\nSi desea personalizar sus alarmas, debe desactivar el modo Silencio.",
+                "alarmsBannerBodyGKS": "El modo Silencio está activado y sus alarmas de glucosa, cetona, y de pérdida de señal se han silenciado.\n\nSi desea recibir alarmas con sonido, debe desactivar el modo Silencio."
             },
             "startNewSensor": {
                 "body": "Cuando inicie un nuevo sensor, finalizará el que estaba usando.\n\n¿Desea empezar a usar el nuevo sensor?",
@@ -1817,7 +1689,6 @@
                 "discardChanges": "Descartar cambios",
                 "unsavedChanges": "Cambios no guardados"
             },
-            "aiLanguageError": {},
             "graphTimeChange": {
                 "timeChangeMagnitude": "La zona horaria ha cambiado de {{ zone1 }} a {{ zone2 }} ({{ diff }})"
             },
@@ -1890,7 +1761,6 @@
                 "body": "Revise su conexión a Internet e inténtelo nuevamente.",
                 "title": "Error al cargar la página"
             },
-            "foodUpdatedToast": {},
             "highGlucoseAlarm": {
                 "title": "Alarma",
                 "description": "Recibe una alarma de glucosa alta cuando la glucosa supere este valor."
@@ -1898,6 +1768,7 @@
             "turnOnSilentMode": {
                 "body": "Todas las alarmas de glucosa y pérdida de señal se silenciarán durante {{ duration }}.",
                 "title": "Modo Silencio",
+                "bodyGKS": "All glucose, ketone, and signal loss alarms will be silenced for {{ duration }}.",
                 "turnOnButton": "Activar"
             },
             "alarmsUnavailable": {
@@ -1934,8 +1805,8 @@
                     "title": "Actualizar fecha y hora"
                 },
                 "android": {
-                    "body": "Para poder usar esta aplicación, el teléfono debe estar configurado para actualizar automáticamente la fecha y la hora.",
-                    "body2": "Habilite la fecha y hora automáticas desde la configuración del teléfono.",
+                    "body": "Para poder usar esta aplicación, el teléfono debe estar configurado para actualizar automáticamente la fecha y la hora. ¿Desea activarlo?",
+                    "body2": "Enable Automatic Date & Time from your phone settings.",
                     "title": "Fecha y hora automáticas desactivadas"
                 }
             },
@@ -1947,10 +1818,12 @@
                 "signalLoss": "Mantenga el teléfono dentro del alcance del sensor en todo momento. Si los problemas continúan, pruebe apagar y encender el Bluetooth de su teléfono o reiniciar su teléfono.",
                 "sensorError": "Su sensor realiza controles de calidad continuos y las lecturas de glucosa se han pausado. Una vez terminados los controles, el sensor volverá a proporcionar lecturas.\n\nVuelva a comprobarlo en {{ duration }}.",
                 "bluetoothOff": "Se requiere Bluetooth para recibir lecturas de glucosa.",
-                "sensorTooHot": "El sensor está demasiado caliente para dar lecturas de glucosa. Inténtelo nuevamente en unos minutos.",
-                "sensorTooCold": "El sensor está demasiado frío para facilitar lecturas de glucosa. Inténtelo nuevamente en unos minutos."
+                "sensorTooHot": "Su sensor está demasiado caliente para leer sus niveles de glucosa. Inténtelo nuevamente en unos minutos.",
+                "sensorTooCold": "Su sensor está demasiado frío para leer sus niveles de glucosa. Inténtelo nuevamente en unos minutos.",
+                "sensorTooHotGKS": "Su sensor está demasiado caliente para leer sus niveles de cetonas. Inténtelo nuevamente en unos minutos.",
+                "sensorTooColdGKS": "Su sensor está demasiado frío para leer sus niveles de cetonas. Inténtelo nuevamente en unos minutos.",
+                "ketoneReadingsPaused": "Su sensor realiza controles de calidad continuos y las lecturas de cetonas se han pausado. Una vez terminados los controles, el sensor volverá a proporcionar lecturas.\n\nVuelva a comprobarlo en {{ duration }}."
             },
-            "photoTooSmallError": {},
             "reportsServerError": {
                 "title": "Error al cargar la página"
             },
@@ -1988,27 +1861,17 @@
                 "title": "Glucosa promedio"
             },
             "dailyGraphInformation": {
-                "body": "Tu gráfico diario muestra las lecturas diarias de glucosa del sensor.   \n\nSi tu zona horaria cambia, verás el ícono del reloj. Esto puede causar espacios vacíos en el gráfico u ocultar tus lecturas de glucosa. \n\nNota: En el caso de los sensores Libre 2, si el Bluetooth ha perdido su conexión, puede haber espacios vacíos en el gráfico. Para rellenar los espacios vacíos de las últimas 8 horas, escanea tu sensor Libre 2. ",
+                "body": "El Gráfico diario muestra las lecturas de glucosa del sensor por día.\n\nEs posible que vea espacios vacíos en el gráfico cuando no haya escaneado al menos una vez en 8 horas o si perdió la conexión Bluetooth (puede aplicarse a los usuarios de FreeStyle Libre 2).  \n\nPuede aparecer un símbolo de reloj indicando un cambio de zona horaria. Podrían producirse espacios vacíos en el gráfico o las lecturas de glucosa podrían estar ocultas.",
                 "title": "Gráfico diario"
             },
-            "notEnoughStorageError": {},
-            "allowPhotoAccessDialog": {},
             "doNotDisturbPermission": {
                 "body": "La aplicación necesita permiso para acceder a la configuración de No molestar. Abra la configuración, seleccione la aplicación y conceda este permiso. Vuelva a la aplicación para finalizar la configuración.",
                 "title": "Autorizar permiso de aplicación"
-            },
-            "firstTimeAlarmTutorial": {},
-            "longactingDoseReminder": {
-                "bottomSheetBody": "<p>If it's been <strong>more than 24 hours</strong> since your last dose, it may be time to take a dose.</p>\n<p>\nIf it's been <strong>less than 24 hours</strong>, your app is not in sync. Bring your phone and Basal Cap together so the app gets the most up-to-date information.</p>\n<p>\n<strong>TIP:</strong> Have your phone nearby when you take a dose, so the app gets updated right away.</p>",
-                "bottomSheetTitle": "Check Libre Cap Basal for time since last dose",
-                "notificationBody": "If it's been more than 24 hours since your last dose of long-acting insulin, it may be time to take a dose. Tap for details.",
-                "notificationTitle": "Check Libre Cap Basal"
             },
             "lowGlucoseEventsReport": {
                 "body": "Eventos de glucosa baja proporciona información sobre el número de eventos de glucosa baja medidos por el sensor. Un evento de glucosa baja se registra cuando la lectura de glucosa del sensor está por debajo de 70 mg/dL durante más de 15 minutos. El número total de eventos se muestra arriba del gráfico. El gráfico de barras muestra los eventos de glucosa baja en diferentes períodos del día.",
                 "title": "Eventos de glucosa baja"
             },
-            "allowCameraAccessDialog": {},
             "internetConnectionError": {
                 "body": "Revise su conexión a Internet e inténtelo nuevamente.",
                 "title": "Error al cargar la página"
@@ -2026,18 +1889,16 @@
                 "body": "Esta aplicación ya no está conectada a su cuenta y, por lo tanto, no puede acceder a esta función.",
                 "title": "Función no disponible"
             },
-            "foodPredictionReadyToast": {},
-            "ketoneSummaryBottomSheet": {},
             "carbohydrateUnitsServings": {
                 "title": "Porciones"
             },
-            "selectADifferentTimeDialog": {},
             "unsuccessfulSensorActivation": {
                 "headers": {
                     "scanError": "Error de escaneo",
                     "checkSensor": "Comprobar sensor",
                     "sensorEnded": "El sensor ha terminado",
-                    "currentSensor": "Sensor actual",
+                    "pairingError": "Pairing error",
+                    "currentSensor": "Sensor ya iniciado",
                     "replaceSensor": "Cambie el sensor",
                     "sensorStartingUp": "Sensor iniciándose",
                     "incompatibleSensor": "Sensor incompatible",
@@ -2047,8 +1908,9 @@
                     "scanError": "El escaneo no tuvo éxito. Pulse el botón de escanear y vuelva a escanear.",
                     "checkSensor": "Compruebe su sensor. Si no está bien sujeto a la piel, quítese el sensor e inicie uno nuevo. Si está colocado correctamente, intente iniciar el sensor otra vez.",
                     "sensorEnded": "Inicie un nuevo sensor para comprobar el nivel de glucosa.",
-                    "currentSensor": "El sensor que acaba de escanear ya está iniciado. Recibirá los resultados de glucosa de forma automática directamente en el teléfono.",
-                    "replaceSensor": "Su sensor realiza controles de calidad continuos y se ha desconectado por su seguridad.\n\nAplique e inicie un nuevo sensor para seguir controlando su glucosa.",
+                    "pairingError": "Para añadir el sensor a este dispositivo después de las primeras 24 horas, ambos dispositivos deben estar conectados a LibreView con la misma cuenta.",
+                    "currentSensor": "Ya ha iniciado este sensor y recibirá automáticamente las lecturas del sensor.",
+                    "replaceSensor": "Su sensor realiza controles de calidad continuos y se ha desconectado por su seguridad.\n\nAplique e inicie un nuevo sensor para seguir monitorizando sus lecturas.",
                     "sensorStartingUp": "Este sensor se ha iniciado, pero aún no está listo para usarse.",
                     "incompatibleSensor": "Este sensor no se puede usar con esta versión de la aplicación.",
                     "sensorAlreadyInUse": "El sensor que acaba de escanear no se puede usar porque se inició con otro dispositivo."
@@ -2069,7 +1931,9 @@
             "notEnoughSensorData": "Sin suficientes datos del sensor",
             "numOfDaysDataRequired": "Se requieren {{ count }} días de datos."
         },
-        "sensors": {},
+        "sensors": {
+            "44100": "Libre Duo"
+        },
         "Settings": {
             "appSettings": {
                 "uom": "Unidad de medida",
@@ -2127,7 +1991,6 @@
                     "guides": "GUÍAS",
                     "usersManual": "Manual del usuario",
                     "quickStartGuide": "Guía de inicio rápido",
-                    "libreCapBasalGuides": "Guías del tapón basal de Libre",
                     "quickReferenceGuide": "Guía de referencia rápida"
                 },
                 "safety": {
@@ -2146,7 +2009,8 @@
                     "howToScan": "Cómo escanear un sensor",
                     "tutorials": "TUTORIALES",
                     "howToApply": "Cómo aplicar un sensor",
-                    "glucoseReadings": "Lecturas de glucosa"
+                    "glucoseReadings": "Lecturas de glucosa",
+                    "ketoneMonitoring": "Monitorización de cetonas"
                 }
             }
         },
@@ -2174,45 +2038,43 @@
                 "copyrightStatement": "FreeStyle, Libre y las marcas relacionadas son marcas comerciales de Abbott Diabetes Care Inc. en varias jurisdicciones."
             }
         },
-        "dietFactors": {
-            "note": "Nota",
-            "carbs": "Carbohidratos",
-            "exercise": "Ejercicio",
-            "laInsulin": "Insulina de acción prolongada",
-            "raInsulin": "Insulina de acción rápida"
-        },
         "appLabelling": {
             "helpMenuAppLabels": {
-                "GKS": {},
+                "GKS": {
+                    "userManual": "https://cms.libreview.io/pDmlff34G6mGywrFer5Xq-ART48742-001-A/UserManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/77jWjkyiRxqNNAKIEVd3wy-ART48598-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/1na81dA4AEkvgMCoSpOIRP-ART48699-001-A/QRG.zip"
+                },
                 "FSL2": {
-                    "userManual": "https://cms.libreview.io/6fh2gPyVyVNrWCBYFmLjzs-ART47276-002/ART47276-002_rev-A-pub.zip",
-                    "quickStartGuide": "https://cms.libreview.io/6wKBLldUZzVvXR9wEhHz0n-ART48655-002/ART48655-002_rev-A-html.zip",
-                    "quickReferenceGuide": "https://cms.libreview.io/dEbQCTklHYT7XXPwbiSkE-ART48490-002/ART48490-002_rev-A-html.zip"
+                    "userManual": "https://cms.libreview.io/4YhzSdn02gukHHv56ndmiJ-ART47276-001-A/userManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/6YTA19WCxefXjYBZuR3R9x-ART48655-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/7f1RGPe9nQWSKA23No98IY-ART48490-001-A/QRG.zip"
                 },
                 "FSL3": {
-                    "userManual": "https://cms.libreview.io/2wqcKayZ1KPV8obY72CHSQ-ART48742-002/ART48742-002_rev-A-pub.zip",
-                    "quickStartGuide": "https://cms.libreview.io/5yfAcBKKJUjwhZPKm1Jdzo-ART48598-002/ART48598-002_rev-A-html.zip",
-                    "quickReferenceGuide": "https://cms.libreview.io/5BlA3QdA8uqKbYYUT2SE4F-ART48699-002/ART48699-002_rev-A-html.zip"
+                    "userManual": "https://cms.libreview.io/pDmlff34G6mGywrFer5Xq-ART48742-001-A/UserManual.zip",
+                    "quickStartGuide": "https://cms.libreview.io/77jWjkyiRxqNNAKIEVd3wy-ART48598-001-A/QSG.zip",
+                    "quickReferenceGuide": "https://cms.libreview.io/1na81dA4AEkvgMCoSpOIRP-ART48699-001-A/QRG.zip"
                 },
-                "safetyInfo": "https://cms.libreview.io/4c31pvIFNaKNDdqBwXuyrg-ART48427-002/ART48427-002_rev-A-html.zip",
-                "OSCompatibilityGuide": "https://cms.libreview.io/2ZV3N9mAE2C7Elkp1X4pYb-ART48719-002/ART48719-002_rev-A-pub.zip",
-                "sensorCompatibilityGuide": "https://cms.libreview.io/1w0Z8FFCenQoljv4yHWunF-ART44626-006/ART44626-006_rev-A.zip"
+                "safetyInfo": "https://cms.libreview.io/7urY1TjLj981ZL7hYQ5eM8-ART48427-001-A/SafetyInfo.zip",
+                "OSCompatibilityGuide": "https://cms.libreview.io/5CJhIpoErKYcL2NeqL94ey-ART44628-004-A/OSCompatibilityGuide.zip",
+                "sensorCompatibilityGuide": "https://cms.libreview.io/XoOwILxeAnDEokcqkWp5H-ART44626-006/sensorCompatibilityGuide.zip"
             }
         },
         "assistScreen": {
-            "foodCard": {},
-            "sensorCard": {},
             "actionButton": {
                 "typeInFoodBottomSheet": {
-                    "tryAgainModal": {}
+                    "title": "Type in your food",
+                    "tryAgainModal": {
+                        "body": "Our AI model doesn’t currently support languages other than English. Please type in your food in English and try again.",
+                        "title": "Try again in English"
+                    },
+                    "foodDescription": "Write a detailed description of your food"
                 }
             },
-            "captureImage": {},
             "emptyPastDay": {},
             "firstTimeUseCard": {},
             "analyzingFoodState": {},
-            "firstTimeEmptyCard": {},
-            "readyForNextMealCard": {}
+            "firstTimeEmptyCard": {}
         },
         "insightsTabs": {
             "daily": "Diario",
@@ -2237,18 +2099,7 @@
             "seconds": "Segundos"
         },
         "healthDetails": {
-            "weightSettingsBottomSheet": {
-                "pounds": "pounds",
-                "weight": "Weight",
-                "warningText": "<p><strong>WARNING:</strong> Be sure to enter your current weight. Your weight helps Dose Guidance understand your insulin needs.</p>",
-                "removeWeight": "Remove weight",
-                "warningDialogCta": "Turn OFF Dose Guidance",
-                "warningDialogTitle": "Weight outside range for Dose Guidance",
-                "warningDialogBodyOne": "If you save this weight, Dose Guidance will be turned OFF and will not suggest changes to your recommended daily dose.",
-                "warningDialogBodyTwo": "Only use Dose Guidance if your weight is between 60 and 440 pounds. If your weight is outside this range, contact your healthcare professional.",
-                "removingWeightDialogBody": "If you remove your weight, we will turn Dose Guidance OFF, and your Basal Cap will not receive changes to your daily dose.",
-                "removingWeightDialogTitle": "Removing weight disables Dose Guidance"
-            },
+            "weightSettingsBottomSheet": {},
             "dietaryPreferencesBottomSheet": {
                 "dietOptions": {}
             }
@@ -2260,18 +2111,25 @@
             "notify_spokenHi": "Fuera de rango y alta",
             "notify_spokenLo": "Fuera de rango y baja",
             "notify_spokenMgDl": "miligramos por decilitro",
+            "start_sensor_body": "Siga los pasos de la aplicación para iniciar su sensor.",
             "notify_alarms_mgdl": "mg/dL",
             "notify_spokenMmolL": "milimoles por litro",
             "sensorReadyContent": "Contenido de sensor listo",
+            "start_sensor_title": "Inicie su sensor \\u26A0\\uFE0F",
             "check_your_readings": "Abra la aplicación para comprobar sus lecturas",
+            "notify_alarms_mmoll": "mmol/L",
             "notify_sensor_error": "Notificar error del sensor",
             "notify_sensor_ready": "Sensor listo",
             "notify_spokenHi_alt": "Fuera de rango y alta",
             "notify_spokenLo_alt": "Fuera de rango y baja",
             "alarmsDisabledAuBlock": "Se han desactivado las alarmas. Para obtener más información, abra la aplicación.",
+            "category_alarms_title": "Alarmas",
             "category_alerts_title": "Alertas",
             "notify_sensor_expired": "El sensor ha terminado",
+            "str_results_hi_ketone": "Above 3.0 mmol/L",
             "category_glucose_title": "Alarmas de glucosa y alarmas del sistema",
+            "notify_alarm_ketone_one": "High Ketones Alarm",
+            "notify_alarm_ketone_two": "Urgent High Ketones Alarm",
             "resultUrgentHighKetones": "Por arriba de 3.0 mmol/L",
             "alarmsDisabledAuNonBlock": "Modifique la configuración de su teléfono para recibir alarmas.",
             "notify_alarm_low_glucose": "Alarma de glucosa baja \\u26A0\\uFE0F",
@@ -2296,6 +2154,7 @@
             "notify_sensor_expires_in_1_hour": "El sensor caducará dentro de 1 hora",
             "notify_sensor_expires_in_3_days": "El sensor caducará dentro de 3 días",
             "notify_alarm_serious_low_glucose": "Alarma de glucosa baja urgente \\u26A0\\uFE0F",
+            "notify_alarm_signal_loss_msg_GKS": "Las alarmas de glucosa y de cetonas no están disponibles",
             "notify_alarms_mgdl_accessibility": "miligramos por decilitro",
             "notify_alarms_check_blood_glucose": "Verificar glucosa en sangre",
             "notify_sensor_error_terminated_msg": "El sensor no funciona. Quítese el sensor e inicie uno nuevo.",
@@ -2321,44 +2180,13 @@
                 "help": "Ayuda",
                 "About": "Acerca de",
                 "account": "Cuenta",
-                "insulin": "Insulin",
-                "badgeNew": "New",
                 "eventLog": "Registro de eventos",
                 "pageTitle": "Perfil",
                 "appSettings": "Configuración de la aplicación",
-                "healthDetails": "Detalles de salud",
-                "notifications": "Notificaciones",
-                "remindMeAfter": "Remind me after",
-                "turnOnMessage": "Turn ON to be notified if you may have missed a dose.",
                 "sessionExpired": "Sesión caducada",
                 "startNewSensor": "Iniciar nuevo sensor",
                 "appNotConnected": "Esta aplicación ya no está conectada a su cuenta y, por lo tanto, algunas funciones no están disponibles.",
-                "insulinSettings": "Insulin Settings",
-                "connectedDevices": "Dispositivos conectados",
-                "shareMyHealthData": "Aplicaciones conectadas",
-                "remindMeBottomSheetTitle": "Remind me when I haven't recorded a dose in the last:",
-                "longActingDoseReminderTitle": "Long-acting dose reminder"
-            },
-            "doseGuidanceSettings": {
-                "title": "Dose Guidance",
-                "statusOn": "On",
-                "important": "<p><strong>IMPORTANT:</strong> Dose Guidance will aim to bring your fasting and pre-meal glucose into the selected range. Discuss your glucose goal with your healthcare professional before making any changes.</p>",
-                "description": "When ON, Dose Guidance may change your recommended insulin doses based on recent glucose and dosing information.",
-                "glucoseGoal": "GLUCOSE GOAL",
-                "confirmAction": "Confirm",
-                "confirmHeading": "Confirm settings for",
-                "offWarningBody": "When OFF, Dose Guidance will not suggest changes to your recommended daily dose.",
-                "enterWeightError": "Only use Dose Guidance if your weight is between 60 and 440 pounds. If your weight is outside that range, contact your healthcare professional.",
-                "enterWeightLabel": "Weight",
-                "enterWeightTitle": "Enter your weight",
-                "offWarningHeading": "Are you sure you want to turn OFF Dose Guidance?",
-                "tightControlLabel": "Tight control",
-                "tightControlValue": "90 - 110 mg/dL",
-                "enterWeightWarning": "<p><strong>WARNING:</strong> Be sure to enter your current weight. Your weight helps Dose Guidance understand your insulin needs.</p>",
-                "standardControlLabel": "Standard control (default)",
-                "standardControlValue": "100 - 130 mg/dL",
-                "conservativeControlLabel": "Conservative control",
-                "conservativeControlValue": "110 - 140 mg/dL"
+                "shareMyHealthData": "Aplicaciones conectadas"
             }
         },
         "ApplyNewSensor": {
@@ -2381,11 +2209,6 @@
         "assistTutorial": {
             "step1": {},
             "step2": {},
-            "step3": {
-                "aiWarningSection": {},
-                "glucoseImpactSection": {},
-                "medicalAdviceSection": {}
-            },
             "header": {}
         },
         "logbookAndNotes": {
@@ -2416,178 +2239,14 @@
             "referToPhoneAndOSCompGuideConfirmed": "Consulte la Guía de compatibilidad de teléfonos y sistemas operativos para obtener la última lista de teléfonos y sistemas operativos confirmados."
         },
         "addBasalCapScreen": {
-            "exitSetup": {
-                "exitCta": "Exit setup",
-                "exitHeader": "Exit setup",
-                "continueCta": "Continue setup",
-                "exitWarning1": "If you exit now, you'll have 15 days to complete your Basal Cap setup. After that, you'll need to start over.",
-                "exitWarning2": "If you want to resume your setup later, you can do this in your Profile under Connected Devices.",
-                "inProgressCta": "Resume",
-                "inProgressNote": "Setup in progress. If not completed by {{ monthAndTime }}, you'll need to add the Basal Cap again.",
-                "inProgressTitle": "Libre Cap Basal",
-                "resumeSetupTitle": "Resume Basal Cap setup",
-                "resumeSetupMessage": "Do you want to start your setup from the beginning or pick up where you left off?",
-                "insulinDevicesTitle": "Insulin Devices",
-                "resumeSetupRestartCta": "Start from beginning",
-                "resumeSetupContinueCta": "Pick up where I left off"
-            },
+            "exitSetup": {},
             "takingADose": {
-                "question1": "To confirm a dose was recorded, what would you expect to see on the Basal Cap screen?",
-                "question2": "When does the Basal Cap record a dose?",
-                "question3": "If you take a dose that is different than what is shown on the Basal Cap, where do you go in your app to update this dose amount?",
-                "logbookBody": "Go to your logbook (in your app under Insights) to view your recorded doses.\nThe dose shown on the Basal Cap is the amount that gets recorded in the logbook. If you take a dose that is different than what got recorded, you can update it in your logbook.",
-                "logbookTitle": "Keep your logbook up to date",
-                "wrongAnswer1": "<p>The Basal Cap shows you how long it's been since the last dose was recorded.</p>\n<p>Seeing <strong>0 hr </strong>and<strong> 0 min</strong> means you just recorded a dose. A dose is recorded when the Basal Cap is placed back on the pen.</p>",
-                "wrongAnswer2": "<p>A dose is recorded every time you put the Basal Cap back on the pen after 10 seconds. Listen for a 'click' to be sure the Basal Cap is all the way on the pen.</p>",
-                "wrongAnswer3": "If you take a different dose than what the Basal Cap recommends, go to Insights in your app to update the logbook.\nDose Guidance uses your dosing information to recommend changes to your Daily dose. So, it's important to keep your logbook up to date.",
-                "correctAnswer1": "<p>Seeing <strong>0 hr </strong>and<strong> 0 min</strong> means you just recorded a dose. A dose is recorded when the Basal Cap is placed back on the pen.</p>",
-                "correctAnswer2": "A dose is recorded every time you put the Basal Cap back on the pen after 10 seconds. Listen for a 'click' to be sure the Basal Cap is all the way on the pen.",
-                "correctAnswer3": "If you take a different dose than what the Basal Cap recommends, go to Insights in your app to update the logbook. \nDose Guidance uses your dosing information to recommend changes to your daily dose. So, it's important to keep your logbook up to date.",
-                "doNotTakeADose": "Do not take a dose",
-                "howToTakeADose": "How you will take a dose",
-                "question1Option1": "12 hr 5 min",
-                "question1Option2": "5 hr 23 min",
-                "question1Option3": "20 hr 44 min",
-                "question1Option4": "0 hr 0 min",
-                "question2Option1": "When the Basal Cap is taken off the pen",
-                "question2Option2": "When you put the Basal Cap back on the pen after 10 seconds",
-                "question3Option1": "Home",
-                "question3Option2": "Insights",
-                "question3Option3": "Alarms",
-                "question3Option4": "Profile",
-                "wrongAnswerTitle": "That’s not correct",
-                "doNotTakeADoseCta": "I understand",
-                "keepAppSyncedBody": "<p>If you see <SyncIcon />, your Basal Cap has information to send to your Libre app.</p>\n<p>Bring your phone within 20 feet of your Basal Cap. Then, press the button on the cap so it can communicate with your app.</p>\n<p><strong>TIP:</strong> Keep your phone near your Basal Cap when you take a dose so the dose gets logged in your app right away.</p>",
-                "correctAnswerTitle": "That's right",
-                "doNotTakeADoseBody": "We'll show you how to use your Basal Cap, but you won't take a dose during this tutorial.",
-                "howToTakeADoseBody": "<ol><li index=\"1\"><p>Check the time since last dose</p></li><li index=\"2\"><p>View the daily dose amount</p></li><li index=\"3\"><p>Take the dose and put the Basal Cap back on the pen</p></li></ol>\n<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>\n",
-                "keepAppSyncedTitle": "Keep your app and Basal Cap synced",
-                "keepAppSyncedBodyDark": "<p>If you see <SyncIconDark />, your Basal Cap has information to send to your Libre app.</p>\n<p>Bring your phone within 20 feet of your Basal Cap. Then, press the button on the cap so it can communicate with your app.</p>\n<p><strong>TIP:</strong> Keep your phone near your Basal Cap when you take a dose so the dose gets logged in your app right away.</p>",
-                "howToTakeADoseBodyNote": "<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>",
-                "howToTakeADoseListItem1": "Check the time since last dose",
-                "howToTakeADoseListItem2": "View the daily dose amount",
-                "howToTakeADoseListItem3": "Take the dose and put the Basal Cap back on the pen",
-                "takingADoseTakingADoseVideo": "https://cms.libreview.io/videos/2LB8Sgpd91H2Ymn4gLNLfR/es-US/takingADoseVideo.mp4"
+                "howToTakeADoseBody": "<ol><li index=\"1\"><p>Check the time since last dose</p></li><li index=\"2\"><p>View the daily dose amount</p></li><li index=\"3\"><p>Take the dose and put the Basal Cap back on the pen</p></li></ol>\n<p><strong>NOTE:</strong> The timer will reset to 0 hr 0 min to confirm a dose was recorded.</p>\n"
             },
-            "doseGuidance": {
-                "answerBody": "The Dose Guidance feature may suggest a change to your recommended daily dose amount.",
-                "endScreenBody": "We'll now help you set up your Basal Cap.",
-                "endScreenTitle": "Congrats",
-                "questionOption1": "It may suggest an increase or decrease to my recommended daily dose amount",
-                "questionOption2": "It will tell me when to take my long-acting insulin",
-                "answerTitleWrong": "That’s not correct",
-                "doseGuidanceBody": "<p>Dose Guidance helps you manage your long-acting insulin doses. It may suggest changes to your recommended daily dose amount. </p>\n<p><strong>WARNING:</strong> If you are pregnant, turn off Dose Guidance and consult your healthcare professional.</p>",
-                "learningComplete": "Learning complete",
-                "doseGuidanceTitle": "Dose Guidance",
-                "answerTitleCorrect": "That's right",
-                "doseGuidanceQuestion": "How does Dose Guidance help you manage your long-acting insulin doses?",
-                "doseGuidanceDoseGuidanceVideo": "https://cms.libreview.io/videos/70u7ewtUCtk60TLQEOwMeB/es-US/doseGuidanceVideo.mp4"
-            },
-            "knowledgeCheck": {
-                "title": "Check Your Knowledge",
-                "duration": "5 min",
-                "tryAgain": "Try Again",
-                "thatsRight": "That's right",
-                "thatsNotCorrect": "That's not correct",
-                "checkCompleteTitle": "Knowledge check complete\n",
-                "questionOneContent": "You get a notification that it may be time to take a dose. What should you do next?",
-                "questionSixContent": "How often should you review the recommended daily dose on your basal cap?",
-                "questionTwoContent": "What might the basal cap show when it's time to take a dose?",
-                "questionFiveContent": "The basal cap recommended a daily dose of 20 units, but you only took 10 units. Where in the app should you go to update the logbook to show the dose you took?",
-                "questionFourContent": "When you put the basal cap back on the pen after taking a dose, what dose amount is automatically recorded in the app logbook?",
-                "questionSixResponse": "Since your recommended daily dose amount can change, always check the basal cap before taking a long-acting insulin dose.",
-                "questionTwoResponse": "<p>Since most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.</p>\n<p>\nRemember that the basal cap counts UP to the time to take a dose, which is around 24 hours.</p>",
-                "checkCompleteContent": "You’re ready to connect your basal cap",
-                "questionFiveResponse": "If you take a different dose than what your basal cap recommends, make sure to record the actual dose you took under Insights in the app.",
-                "questionFourResponse": "Every time you put the basal cap back on the pen after 10 seconds, a dose is recorded. The daily dose amount shown on the Basal Cap gets recorded.",
-                "questionOneOptionOne": "Take a dose right away",
-                "questionOneOptionTwo": "Skip a dose",
-                "questionSixOptionOne": "Every day before I take a dose",
-                "questionSixOptionTwo": "Once a week",
-                "questionThreeContent": "How do you check your recommended daily dose on the basal cap?",
-                "questionTwoOptionOne": "1 hr 10 min",
-                "questionTwoOptionTwo": "24 hr 15 min",
-                "questionFiveOptionOne": "Home",
-                "questionFiveOptionTwo": "Insight",
-                "questionFourOptionOne": "The dose amount you dialed on your pen",
-                "questionFourOptionTwo": "The recommended daily dose shown on the basal cap",
-                "questionThreeResponse": "Always press the button on the Basal Cap to view your recommended daily dose amount before taking your long-acting insulin each day. ",
-                "questionTwoOptionFour": "10 hr 35 min",
-                "questionFiveOptionFour": "Profile",
-                "questionOneOptionThree": "See how long it’s been since your last dose",
-                "questionSixOptionThree": "Once a month",
-                "questionThreeOptionOne": "The Basal Cap does not show a recommended daily dose",
-                "questionThreeOptionTwo": "Press the button on the Basal Cap",
-                "questionTwoOptionThree": "0 hr 0 min",
-                "questionFiveOptionThree": "Alarms",
-                "questionOneRightContent": "Remember to press the button on your basal cap to check the time since your last dose before you take a dose.",
-                "questionOneWrongContent": "Remember to press the button on your basal cap to check the time since your last dose before you take a dose.",
-                "questionThreeOptionThree": "Take the Basal Cap off the pen"
-            },
-            "dailyDoseAmount": {
-                "question1": "Based on the screen above:\nWhat is the recommended daily dose amount of long-acting insulin?",
-                "rightAnswerBody": "<p><strong>IMPORTANT:</strong> Always check your Basal Cap for the recommended daily dose amount before taking your long-acting insulin each day.</p>",
-                "wrongAnswerBody": "<p>Check the screen above. The number of units shown is the recommended daily dose amount of long-acting insulin.</p>\n<p><strong>IMPORTANT:</strong> Always check your Basal Cap for the recommended daily dose amount before taking your long-acting insulin each day.</p>",
-                "question1Option1": "32 units",
-                "question1Option2": "17 units",
-                "question1Option3": "23 units",
-                "question1Option4": "5 units",
-                "rightAnswerHeader": "That's right",
-                "wrongAnswerHeader": "That’s not correct",
-                "dailyDoseAmountBody": "After you confirm it's time to take a long-acting insulin dose, you’ll press the button again to see the recommended daily dose amount.",
-                "dailyDoseAmountTitle": "Daily dose amount",
-                "dailyDoseAmountDailyDoseAmountVideo": "https://cms.libreview.io/videos/2b6v97UJMVjTUODgQ9sOJO/es-US/dailyDoseAmountVideo.mp4"
-            },
-            "addBasalCapScreenSet": {
-                "title": "Learn how to use your Basal Cap",
-                "replay": "Replay",
-                "warning": "<p><strong>IMPORTANT:</strong> Do not take an insulin dose while learning or setting up the Basal Cap.</p>",
-                "subtitle": "We'll walk you through how to use and set up your Basal Cap.",
-                "step1Time": "10 min",
-                "step2Time": "2 min",
-                "step3Time": "5 min",
-                "step4Time": "2 min",
-                "getStarted": "Get started",
-                "thatsRight": "That's right",
-                "serverError": "Error communicating with the server.",
-                "wrongAnswer1": "Remember your timer counts up from 0 to 24 hours, so it would be too soon to take a dose.\nSince most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.",
-                "wrongAnswer2": "It likely would be time to take a dose.\nSince most long-acting insulins are taken around the same time every day, there should be about 24 hours between each dose.",
-                "libreCapBasal": "The Libre Cap Basal",
-                "setupBasalCap": "Set up your Basal Cap",
-                "correctAnswer1": "It would be too soon to take a dose.",
-                "correctAnswer2": "It likely would be time to take a dose.",
-                "letsGetStarted": "Let's get started",
-                "thatsNotCorrect": "That’s not correct",
-                "dailyDoseOption1": "Yes, it would be time to take a dose",
-                "dailyDoseOption2": "No, it would not be time to take a dose",
-                "dailyDoseQuestion": "Based on the screen above: \nWould it be time to take your daily dose of long-acting insulin?",
-                "errorLoadingVideo": "Error Loading Video",
-                "libreCapBasalBody": "An easy way to adjust and manage your long-acting insulin doses.",
-                "timeSinceLastDose": "Time since last dose",
-                "checkYourKnowledge": "Check your knowledge",
-                "leaveBasalCapInBox": "Leave your Basal Cap in the box",
-                "connectYourBasalCap": "Connect your Basal Cap",
-                "errorLoadingVideoBody": "Please check your internet connection and try again.",
-                "leaveBasalCapInBoxCta": "I understand",
-                "timeSinceLastDoseBody": "<p>You'll press the button on the Basal Cap once to see the timer. The timer counts up from 0 to 24 hours to help you remember when you last recorded a dose and to decide if it's time to take your next dose.</p>\n<p><strong>NOTE:</strong> Since most long-acting insulins are taken around the same time every day, the time since your last dose should be close to 24 hours.</p>",
-                "leaveBasalCapInBoxBody": "First, you'll be learning more about the Basal Cap. We'll let you know when it's time to take your Basal Cap out of the box and set it up.",
-                "timeToTakeYourDailyDose": "Based on the screen above:\n\nWould it be time to take your daily dose of long-acting insulin?",
-                "addBasalCapScreenSetAddBasalCapVideo": "https://cms.libreview.io/videos/426flUEYWa8BJzCvM8Xw0b/es-US/addBasalCapVideo.mp4",
-                "addBasalCapScreenSetTimeSinceLastDoseVideo": "https://cms.libreview.io/videos/5OgXEMtVAohNb6JgkksF3g/es-US/timeSinceLastDoseVideo.mp4",
-                "addBasalCapScreenSetAddBasalCapToInsulinPenVideo": "https://cms.libreview.io/videos/4mM9dL2S4A3cj40gFXZsI4/es-US/addBasalCapToInsulinPenVideo.mp4"
-            },
-            "longactingDoseReminder": {
-                "question": "If you get this notification, what should you do?",
-                "answerBody": "<p>Before taking a dose, <strong>always check the Basal Cap</strong> to confirm the time since last dose.</p>",
-                "questionOption1": "Check my Basal Cap to confirm the time since last dose",
-                "questionOption2": "Take a long-acting dose",
-                "questionOption3": "Ignore it",
-                "rightAnswerHeader": "That's right",
-                "wrongAnswerHeader": "That’s not correct",
-                "longactingDoseReminderBody": "<p>The app will let you know if you may have missed recording a dose of long-acting insulin.</p>\n<p><strong>IMPORTANT:</strong> When you get the notification in the app, <strong>always check the Basal Cap</strong> to confirm the time since last dose.</p>",
-                "longactingDoseReminderTitle": "Long-acting dose reminder",
-                "longactingDoseReminderLongactingDoseReminderVideo": "https://cms.libreview.io/videos/3XuilbDNG6UVSdfivp8rGM/es-US/longactingDoseReminderVideo.mp4"
-            }
+            "doseGuidance": {},
+            "dailyDoseAmount": {},
+            "addBasalCapScreenSet": {},
+            "longactingDoseReminder": {}
         },
         "alarmsUnavailable": {
             "openSettings": "Abrir Configuración",
@@ -2658,11 +2317,14 @@
             "insights": "Perspectivas"
         },
         "startTutorialScreen": {
-            "startTutorialSet": {}
+            "startTutorialSet": {
+                "body": "Looks like this is your first time using a sensor that supports ketone monitoring. We’ll walk you through how to use it in the following tutorial.",
+                "title": "Learn about your new {{ sensorName }}",
+                "startSensor": "Start {{ sensorName }}",
+                "learnAboutMonitoring": "Learn about Ketone Monitoring"
+            }
         },
         "InsightsDailySummary": {
-            "glucoseGraph": {},
-            "ketonesGraph": {},
             "insightsDailySummaryScreen": {
                 "title": "Sin suficientes datos del sensor",
                 "loading": "Cargando...",
@@ -2725,18 +2387,7 @@
                 "privacyNotice": "Aviso de privacidad"
             }
         },
-        "connectedDevicesScreen": {
-            "endsOn": "Termina el {{ value }}",
-            "sensor": "Sensor",
-            "basalCap": "Tapón basal de Libre",
-            "basalCapVideos": "Videos del tapón basal de Libre",
-            "insulinDevices": "Dispositivos de insulina",
-            "addInsulinDevice": "Agregar dispositivo de insulina",
-            "putBasalCapOnPen": "Colocar el tapón basal en la pluma",
-            "timeSinceLastDose": "Tiempo desde la última dosis",
-            "basalSystemOverview": "Descripción general del sistema basal",
-            "putBasalCapOnPenBody": "Retire y deseche el tapón que viene con su pluma de insulina. Introduzca la pluma en el tapón basal hasta escuchar un \"clic\". Deje el tapón basal EN su pluma. Solo QUÍTELO para recibir una dosis."
-        },
+        "connectedDevicesScreen": {},
         "howToScanIosScanButton": {
             "scanButtonIos": {
                 "body": "Pulse el botón de escanear antes de escanear el sensor.",
@@ -2744,24 +2395,59 @@
             }
         },
         "onboardingTutorialSteps": {
-            "header": {},
-            "gksTutorialAlarms": {},
-            "gksTutorialMakeAPlan": {},
-            "gksTutorialHighKetones": {},
-            "gksTutorialTrendArrows": {},
-            "gksTutorialKetoneRanges": {},
-            "gksTutorialNormalKetones": {},
-            "gksTutorialElevatedKetones": {},
-            "gksTutorialGlucoseAndKetones": {}
+            "header": {
+                "ketoneMonitoring": "Ketone Monitoring"
+            },
+            "gksTutorialAlarms": {
+                "body": "Ketone alarms will notify you when your ketones have risen above a certain level.",
+                "title": "Ketone alarms"
+            },
+            "gksTutorialMakeAPlan": {
+                "body": "Continuously monitoring ketones can help you avoid a life-threatening condition called diabetic ketoacidosis (DKA). Talk with your healthcare professional about what to do if you have elevated or high ketones.",
+                "title": "Make a plan"
+            },
+            "gksTutorialHighKetones": {
+                "body": "<p>If your ketones are <strong>above {{ value }} {{ uom }}</strong>, your high ketone value will be on a red banner above a ketone graph.</p><br /><p>Follow the plan you made with your healthcare professional. </p>",
+                "title": "High ketones"
+            },
+            "gksTutorialTrendArrows": {
+                "body": "A trend arrow shows the direction where your elevated or high ketone value is headed. It could be rising, changing slowly, or falling.",
+                "title": "Ketone trend arrow",
+                "rising": "Subiendo",
+                "falling": "Bajando",
+                "changingSlowly": "Cambiando lentamente"
+            },
+            "gksTutorialKetoneRanges": {
+                "body": "Your app informs you if your ketones are normal, elevated, or high. Your ketone range determines the background color of your ketone information.",
+                "title": "Ketone ranges",
+                "highKetonesLabel": "Cetonas altas (por encima de {{ value }} {{ uom }})",
+                "normalKetonesLabel": "Cetonas normales (por debajo de {{ value }} {{ uom }})",
+                "elevatedKetonesLabel": "Cetonas elevadas ({{ value1 }} a {{ value2 }} {{ uom }})"
+            },
+            "gksTutorialNormalKetones": {
+                "body": "<p>If your ketones are <strong>below {{ value }} {{ uom }}</strong>, “Normal Ketones” will be on a green banner.</p>",
+                "title": "Normal ketones"
+            },
+            "gksTutorialElevatedKetones": {
+                "body": "<p>If your ketones are between <strong>{{ value1 }} to {{ value2 }} {{ uom }}</strong>, your elevated ketone value will be on a yellow banner above a ketone graph.</p><br /><p>Follow the plan you made with your healthcare professional.</p>",
+                "title": "Elevated ketones"
+            },
+            "gksTutorialGlucoseAndKetones": {
+                "body": "Your app home page will display both glucose and ketone information. You will be able to tap on the ketone banner or swipe up to view your ketone information.",
+                "title": "Glucose and ketones"
+            }
         },
         "tutorialCompletedScreen": {
-            "tutorialCompleteSet": {}
+            "tutorialCompleteSet": {
+                "body": "You’ve completed the tutorial and are now ready to scan your ketone sensor again to activate it."
+            }
         },
         "SystemOnboardingAllowBle": {
             "allowBlePersmissions": {
-                "body": "La aplicación necesita permiso para conectarse con su sensor a través de Bluetooth.\n\nPara terminar la configuración y recibir lecturas de glucosa y alarmas, debe conceder este permiso en la configuración del teléfono.",
+                "body": "The app needs permission to connect with your sensor via Bluetooth.\n\nIn order to complete setup, receive readings and alarms, you must allow this permission from your phone settings.",
                 "title": "Autorizar permisos de aplicación",
-                "bodyAndroid": "La aplicación necesita permiso de dispositivos cercanos para conectarse con su sensor.\n\nPara terminar la configuración y recibir lecturas de glucosa y alarmas, debe conceder este permiso en la configuración del teléfono."
+                "bodyAndroid": "La aplicación necesita permiso de dispositivos cercanos para conectarse con su sensor.\n\nPara terminar la configuración y recibir lecturas de glucosa y alarmas, debe conceder este permiso en la configuración del teléfono.",
+                "openSettings": "Open settings"
             }
         },
         "timeInRangesReportScreen": {
@@ -2816,20 +2502,16 @@
                 "title": "Lave la zona"
             }
         },
-        "AllowPermissionsOnboarding": {
-            "permissionsScreen": {
-                "allowPermissionsScreen": {}
-            }
-        },
         "SystemOnboardingYourAlarms": {
             "yourAlarmsScreen": {
                 "title": "Alarmas",
-                "subtitle": "Configuremos su teléfono para las alarmas de glucosa."
+                "alarms": "Alarms",
+                "subtitle": "Let's get your phone set up for alarms."
             }
         },
         "alarmsUnavailableBLEAccess": {
             "BLEAccessDisabledScreen": {
-                "body": "La aplicación necesita permiso para conectarse con su sensor a través de Bluetooth.\n\nPara recibir lecturas de glucosa y alarmas, debe conceder este permiso en la configuración del teléfono.",
+                "body": "La aplicación necesita permiso para conectarse con su sensor a través de Bluetooth.\n\nPara recibir lecturas y alarmas, debe conceder este permiso en la configuración del teléfono.",
                 "title": "Se requiere permiso de la aplicación"
             }
         },
@@ -2873,7 +2555,7 @@
                 "subtitle": "Debe tener la edad legal para aceptar, o su tutor legal debe aceptar en su nombre.",
                 "rowItemOneTitle": "Términos de uso",
                 "rowItemTwoTitle": "Aviso de privacidad",
-                "rowItemOneReadMore": "Lee los Términos de uso completos",
+                "rowItemOneReadMore": "Lea las Condiciones de uso completas",
                 "rowItemTwoReadMore": "Lea el Aviso de privacidad completo",
                 "rowItemOneDescription": "He leído y acepto los Términos de uso.",
                 "rowItemTwoDescription": "He leído y entiendo el Aviso de privacidad. "
@@ -2897,7 +2579,7 @@
         "sensorActivationNotification": {
             "notfiy_foreground_service_msg": "Sensor de Libre %1$@",
             "NSBluetoothAlwaysUsageDescription": "{{ shortAppName }} usa Bluetooth para recibir datos de los sensores.",
-            "notfiy_foreground_service_content": "Toque para ver su glucosa actual"
+            "notfiy_foreground_service_content": "Pulse para ver sus lecturas actuales"
         },
         "SystemOnboardingGlucoseColors": {
             "glucoseColorsScreen": {
@@ -2950,7 +2632,7 @@
             "checkYourAudioScreen": {
                 "title": "Verificar el audio",
                 "bodyCopy": "Verifique sus conexiones de audio para saber qué dispositivo reproducirá las alarmas.",
-                "bodyCopy2": "Si tu teléfono está conectado a accesorios como un reloj inteligente, auriculares o altavoces, esto puede afectar tu capacidad para recibir alarmas. Desconecta tu dispositivo de audio cuando no esté en uso."
+                "bodyCopy2": "If your phone is connected to headphones or speakers, it may impact your ability to receive alarms.\nDisconnect your audio device when not in use."
             }
         },
         "SystemOnboardingCurrentGlucose": {
@@ -3023,7 +2705,7 @@
                 "title": "Unidad de medida",
                 "description": "La unidad de medida de la glucosa se configura automáticamente según el país.",
                 "yourCountry": "Su país es",
-                "yourUnitOfMeasurement": "Su unidad de medida es"
+                "yourUnitOfMeasurement": "Your glucose unit of measurement is"
             }
         },
         "alarmUnavailableCriticalAlertsOff": {
@@ -3117,13 +2799,13 @@
         },
         "alarmsUnavailableNearbyDeviceAccess": {
             "NearbyDeviceAccessDisabledScreen": {
-                "body": "La aplicación necesita permiso de dispositivos cercanos para conectarse con su sensor.\n\nPara recibir lecturas de glucosa y alarmas, debe conceder este permiso en la configuración del teléfono.",
+                "body": "La aplicación necesita permiso para conectarse con su sensor a través de Bluetooth.\n\nPara recibir lecturas y alarmas, debe conceder este permiso en la configuración del teléfono.",
                 "title": "Se requiere permiso de la aplicación"
             }
         },
         "systemOnboardingNotCompatibleScreen": {
             "generic": {
-                "body": "Desafortunadamente, su teléfono o sistema operativo NO son compatibles con esta aplicación. No recibirá las lecturas de glucosa ni las alarmas."
+                "body": "Desafortunadamente, su teléfono o sistema operativo NO son compatibles con esta aplicación. No recibirá las lecturas ni las alarmas."
             }
         },
         "SystemOnboardingReceiveGlucoseAlarms": {
@@ -3134,12 +2816,12 @@
         },
         "systemOnboardingCNCOSNotTestedScreen": {
             "OSNotTested": {
-                "body": "NO se ha confirmado la compatibilidad del sistema operativo con esta aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas de glucosa) no sean compatibles."
+                "body": "NO se ha confirmado la compatibilidad del sistema operativo con esta aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas) no sean compatibles."
             }
         },
         "systemOnboardingOSNotCompatibleScreen": {
             "OSNotCompatible": {
-                "body": "Desafortunadamente, su sistema operativo NO es compatible con esta aplicación. No recibirá las lecturas de glucosa ni las alarmas."
+                "body": "Desafortunadamente, su sistema operativo NO es compatible con esta aplicación. No recibirá las lecturas ni las alarmas."
             }
         },
         "tutorialApplyFSL2LiftSensorApplicator": {
@@ -3178,12 +2860,12 @@
         },
         "systemOnboardingCNCPhoneNotTestedScreen": {
             "phoneNotTested": {
-                "body": "NO se ha confirmado la compatibilidad de su teléfono con la aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas de glucosa) no sean compatibles."
+                "body": "Compatibility of your phone with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingPhoneNotCompatibleScreen": {
             "phoneNotCompatible": {
-                "body": "Desafortunadamente, su teléfono NO es compatible con esta aplicación. No recibirá las lecturas de glucosa ni las alarmas."
+                "body": "Desafortunadamente, su teléfono NO es compatible con esta aplicación. No recibirá las lecturas ni las alarmas."
             }
         },
         "tutorialApplyFSL2PrepareSensorApplicator": {
@@ -3194,7 +2876,7 @@
         },
         "systemOnboardingCNCCountryNotTestedScreen": {
             "countryNotTested": {
-                "body": "NO se ha confirmado la compatibilidad de su dispositivo con la aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas de glucosa) no sean compatibles."
+                "body": "Compatibility of your device with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingCountryConfirmationScreen": {
@@ -3208,7 +2890,7 @@
         },
         "systemOnboardingCountryNotSupportedScreen": {
             "CountryNotSupported": {
-                "body": "Desafortunadamente, esta versión de la aplicación NO es compatible en su país. No recibirá las lecturas de glucosa ni las alarmas."
+                "body": "Desafortunadamente, esta versión de la aplicación NO es compatible en su país. No recibirá las lecturas ni las alarmas."
             }
         },
         "systemOnboardingCarbohydrateSettingsScreen": {
@@ -3229,17 +2911,17 @@
         },
         "systemOnboardingCNCApplicationNotTestedScreen": {
             "applicationNotTested": {
-                "body": "Está disponible una nueva versión de la aplicación. Actualice su aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas de glucosa) no sean compatibles."
+                "body": "A new app version is available. Please update your app. Some app features (such as alarms) MAY not be supported."
             }
         },
         "systemOnboardingApplicationNotCompatibleScreen": {
             "applicationNotCompatible": {
-                "body": "Desafortunadamente, esta versión de la aplicación NO es compatible. No recibirá las lecturas de glucosa ni las alarmas. Actualice su aplicación."
+                "body": "Desafortunadamente, esta versión de la aplicación NO es compatible. No recibirá las lecturas ni las alarmas. Actualice su aplicación."
             }
         },
         "systemOnboardingCompatibilityNotConfirmedScreen": {
             "generic": {
-                "body": "NO se ha confirmado la compatibilidad del sistema operativo o de su teléfono con esta aplicación. Es POSIBLE que algunas funciones de la aplicación (como las alarmas de glucosa) no sean compatibles."
+                "body": "Compatibility of your phone or operating system with this app has NOT been confirmed. Some app features (such as alarms) MAY not be supported."
             }
         }
     }
