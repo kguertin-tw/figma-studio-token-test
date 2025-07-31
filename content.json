@@ -9,7 +9,7 @@
                     "belowValue": "Below {{ value }} {{ uom }}",
                     "highKetones": "High Ketones",
                     "normalKetones": "Normal Ketones",
-                    "elevatedKetones": "Elevated Ketones",
+                    "elevatedKetones": "Elevated Ketones!!!",
                     "highKetonesOutOfRange": "High Ketones (Out of Range)"
                 },
                 "glucoseBanner": {
