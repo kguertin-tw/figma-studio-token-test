@@ -6,7 +6,7 @@ def convert(obj):
     elif isinstance(obj, list):
         return [convert(i) for i in obj]
     elif isinstance(obj, str):
-        return {"value": obj}
+        return {"value": obj, "type": "string"}
     else:
         return obj
 
