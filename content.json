@@ -2073,7 +2073,7 @@
         "type": "text"
       },
       "EN.homescreenAltText.libreTwo": {
-        "value": " Libre 2",
+        "value": " Libre 2",
         "type": "text"
       },
       "EN.homescreenAltText.withData": {
@@ -3849,7 +3849,7 @@
         "type": "text"
       },
       "ES.modals.gmiReport.body": {
-        "value": "El indicador del control de glucosa utiliza datos promedio de la glucosa del sensor. El GMI puede utilizarse como indicador de qué tan bien se han controlado sus niveles de glucosa.\n\nNota: El GMI necesita al menos 5 días de datos de glucosa.",
+        "value": "El indicador del control de glucosa utiliza datos promedio de la glucosa del sensor. El GMI puede utilizarse como indicador de qué tan bien se han controlado sus niveles de glucosa.\n\nNota: El GMI necesita al menos 5 días de datos de glucosa.",
         "type": "text"
       },
       "ES.modals.gmiReport.title": {
@@ -3877,11 +3877,11 @@
         "type": "text"
       },
       "ES.modals.selectSensor.fsl2": {
-        "value": "Sensores de Libre 2",
+        "value": "Sensores de Libre 2",
         "type": "text"
       },
       "ES.modals.selectSensor.fsl3": {
-        "value": "Sensores de Libre 3",
+        "value": "Sensores de Libre 3",
         "type": "text"
       },
       "ES.modals.selectSensor.title": {
@@ -4053,7 +4053,7 @@
         "type": "text"
       },
       "ES.modals.logbookAndNotes.foodNoteSet.gramsError": {
-        "value": "Introduzca un número entero entre 0 y 400 gramos",
+        "value": "Introduzca un número entero entre 0 y 400 gramos",
         "type": "text"
       },
       "ES.modals.logbookAndNotes.foodNoteSet.timeOfFood": {
@@ -4153,7 +4153,7 @@
         "type": "text"
       },
       "ES.modals.vitaminCWarning.body": {
-        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor. \nLos suplementos como Airborne® o Emergen-C® contienen dosis altas de vitamina C. Lea las etiquetas de todos los suplementos para conocer su contenido de vitamina C.",
+        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor. \nLos suplementos como Airborne® o Emergen-C® contienen dosis altas de vitamina C. Lea las etiquetas de todos los suplementos para conocer su contenido de vitamina C.",
         "type": "text"
       },
       "ES.modals.vitaminCWarning.title": {
@@ -4357,7 +4357,7 @@
         "type": "text"
       },
       "ES.modals.timeInRangesReport.body": {
-        "value": "Tiempo en el rango proporciona un gráfico que muestra el porcentaje de tiempo que las lecturas de glucosa del sensor estuvieron por encima, por debajo o dentro de un rango determinado de glucosa. El gráfico personalizado se basa en su rango deseado de glucosa, y el gráfico estándar se basa en un rango deseado de 70 a 180 mg/dL.",
+        "value": "Tiempo en el rango proporciona un gráfico que muestra el porcentaje de tiempo que las lecturas de glucosa del sensor estuvieron por encima, por debajo o dentro de un rango determinado de glucosa. El gráfico personalizado se basa en su rango deseado de glucosa, y el gráfico estándar se basa en un rango deseado de 70 a 180 mg/dL.",
         "type": "text"
       },
       "ES.modals.timeInRangesReport.title": {
@@ -4365,11 +4365,11 @@
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.libre2": {
-        "value": "Libre 2",
+        "value": "Libre 2",
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.libre3": {
-        "value": "Libre 3",
+        "value": "Libre 3",
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.previousApp": {
@@ -4389,7 +4389,7 @@
         "type": "text"
       },
       "ES.modals.dailyPatternsReport.body": {
-        "value": "<p>El gráfico de patrones diarios muestra el patrón y la variabilidad de sus lecturas de glucosa, desde su sensor, durante un día típico. Así se lee el gráfico:</p>\n<ul><li><p>La línea sólida muestra la mediana (punto medio) de las lecturas de glucosa.</p></li><li><p>El área sombreada más próxima a la línea muestra el rango de percentiles 25-75 de sus lecturas.</p></li><li><p>El área sombreada más alejada de la línea muestra el rango de percentiles 5-95 de sus lecturas.</p></li></ul>\n<p>Nota: Patrones diarios necesita al menos 5 días de datos de glucosa.</p>",
+        "value": "<p>El gráfico de patrones diarios muestra el patrón y la variabilidad de sus lecturas de glucosa, desde su sensor, durante un día típico. Así se lee el gráfico:</p>\n<ul><li><p>La línea sólida muestra la mediana (punto medio) de las lecturas de glucosa.</p></li><li><p>El área sombreada más próxima a la línea muestra el rango de percentiles 25-75 de sus lecturas.</p></li><li><p>El área sombreada más alejada de la línea muestra el rango de percentiles 5-95 de sus lecturas.</p></li></ul>\n<p>Nota: Patrones diarios necesita al menos 5 días de datos de glucosa.</p>",
         "type": "text"
       },
       "ES.modals.dailyPatternsReport.title": {
@@ -4413,7 +4413,7 @@
         "type": "text"
       },
       "ES.modals.dailyGraphInformation.body": {
-        "value": "El Gráfico diario muestra las lecturas de glucosa del sensor por día.\n\nEs posible que vea espacios vacíos en el gráfico cuando no haya escaneado al menos una vez en 8 horas o si perdió la conexión Bluetooth (puede aplicarse a los usuarios de FreeStyle Libre 2).  \n\nPuede aparecer un símbolo de reloj indicando un cambio de zona horaria. Podrían producirse espacios vacíos en el gráfico o las lecturas de glucosa podrían estar ocultas.",
+        "value": "El Gráfico diario muestra las lecturas de glucosa del sensor por día.\n\nEs posible que vea espacios vacíos en el gráfico cuando no haya escaneado al menos una vez en 8 horas o si perdió la conexión Bluetooth (puede aplicarse a los usuarios de FreeStyle Libre 2).  \n\nPuede aparecer un símbolo de reloj indicando un cambio de zona horaria. Podrían producirse espacios vacíos en el gráfico o las lecturas de glucosa podrían estar ocultas.",
         "type": "text"
       },
       "ES.modals.dailyGraphInformation.title": {
@@ -4429,7 +4429,7 @@
         "type": "text"
       },
       "ES.modals.lowGlucoseEventsReport.body": {
-        "value": "Eventos de glucosa baja proporciona información sobre el número de eventos de glucosa baja medidos por el sensor. Un evento de glucosa baja se registra cuando la lectura de glucosa del sensor está por debajo de 70 mg/dL durante más de 15 minutos. El número total de eventos se muestra arriba del gráfico. El gráfico de barras muestra los eventos de glucosa baja en diferentes períodos del día.",
+        "value": "Eventos de glucosa baja proporciona información sobre el número de eventos de glucosa baja medidos por el sensor. Un evento de glucosa baja se registra cuando la lectura de glucosa del sensor está por debajo de 70 mg/dL durante más de 15 minutos. El número total de eventos se muestra arriba del gráfico. El gráfico de barras muestra los eventos de glucosa baja en diferentes períodos del día.",
         "type": "text"
       },
       "ES.modals.lowGlucoseEventsReport.title": {
@@ -4525,7 +4525,7 @@
         "type": "text"
       },
       "ES.modals.unsuccessfulSensorActivation.descriptions.pairingError": {
-        "value": "Para añadir el sensor a este dispositivo después de las primeras 24 horas, ambos dispositivos deben estar conectados a LibreView con la misma cuenta.",
+        "value": "Para añadir el sensor a este dispositivo después de las primeras 24 horas, ambos dispositivos deben estar conectados a LibreView con la misma cuenta.",
         "type": "text"
       },
       "ES.modals.unsuccessfulSensorActivation.descriptions.currentSensor": {
@@ -4561,7 +4561,7 @@
         "type": "text"
       },
       "ES.modals.appSettingsCarbohydrateUnitsServings.servingsPickerlabel": {
-        "value": "1 porción =",
+        "value": "1 porción =",
         "type": "text"
       },
       "ES.reports.tryAgain": {
@@ -4789,7 +4789,7 @@
         "type": "text"
       },
       "ES.aboutScreen.about.headers.last3Sensors": {
-        "value": "Últimos 3 sensores",
+        "value": "Últimos 3 sensores",
         "type": "text"
       },
       "ES.aboutScreen.about.headers.smartphoneModel": {
@@ -5145,7 +5145,7 @@
         "type": "text"
       },
       "ES.notifications.notify_sensor_expires_in_3_days": {
-        "value": "El sensor caducará dentro de 3 días",
+        "value": "El sensor caducará dentro de 3 días",
         "type": "text"
       },
       "ES.notifications.notify_alarm_serious_low_glucose": {
@@ -5441,7 +5441,7 @@
         "type": "text"
       },
       "ES.homescreenAltText.libreTwo": {
-        "value": " Libre 2",
+        "value": " Libre 2",
         "type": "text"
       },
       "ES.homescreenAltText.withData": {
@@ -5457,7 +5457,7 @@
         "type": "text"
       },
       "ES.homescreenAltText.libreThree": {
-        "value": "Libre 3",
+        "value": "Libre 3",
         "type": "text"
       },
       "ES.homescreenAltText.generalNote": {
@@ -6165,11 +6165,11 @@
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.lowGlucose": {
-        "value": "Glucosa baja (por debajo de 70 mg/dL)",
+        "value": "Glucosa baja (por debajo de 70 mg/dL)",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.highGlucose": {
-        "value": "Glucosa alta (superior a 250 mg/dL)",
+        "value": "Glucosa alta (superior a 250 mg/dL)",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.inRangeGlucose": {
@@ -6177,11 +6177,11 @@
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.lowBetweenGlucose": {
-        "value": "Entre el rango deseado y 70 mg/dL",
+        "value": "Entre el rango deseado y 70 mg/dL",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.highBetweenGlucose": {
-        "value": "Entre el rango deseado y 250 mg/dL",
+        "value": "Entre el rango deseado y 250 mg/dL",
         "type": "text"
       },
       "ES.SystemOnboardingStayConnected.stayConnectedScreen.title": {
@@ -6321,7 +6321,7 @@
         "type": "text"
       },
       "ES.SystemOnboardingVitaminCWarning.vitaminCWarning.bodyCopy": {
-        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor.",
+        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor.",
         "type": "text"
       },
       "ES.SystemOnboardingVitaminCWarning.vitaminCWarning.bodyCopy2": {
@@ -7655,7 +7655,7 @@
         "type": "text"
       },
       "EN.modals.dailyGraphInformation.body": {
-        "value": "Your daily graph shows the daily glucose readings from your sensor.   \n\nIf your time zone changes, you’ll see the clock icon. This may cause gaps in the graph or hide your glucose readings. \n\nNote: For Libre 2 sensors, if your Bluetooth has lost its connection, there may be gaps in the graph. To fill in gaps from the last 8 hours, scan your Libre 2 sensor. ",
+        "value": "Your daily graph shows the daily glucose readings from your sensor.   \n\nIf your time zone changes, you’ll see the clock icon. This may cause gaps in the graph or hide your glucose readings. \n\nNote: For Libre 2 sensors, if your Bluetooth has lost its connection, there may be gaps in the graph. To fill in gaps from the last 8 hours, scan your Libre 2 sensor. ",
         "type": "text"
       },
       "EN.modals.dailyGraphInformation.title": {
@@ -9431,7 +9431,7 @@
         "type": "text"
       },
       "EN.homescreenAltText.libreTwo": {
-        "value": " Libre 2",
+        "value": " Libre 2",
         "type": "text"
       },
       "EN.homescreenAltText.withData": {
@@ -11039,7 +11039,7 @@
         "type": "text"
       },
       "ES.modals.gmiReport.body": {
-        "value": "El indicador del control de glucosa utiliza datos promedio de la glucosa del sensor. El GMI puede utilizarse como indicador de qué tan bien se han controlado sus niveles de glucosa.\n\nNota: El GMI necesita al menos 5 días de datos de glucosa.",
+        "value": "El indicador del control de glucosa utiliza datos promedio de la glucosa del sensor. El GMI puede utilizarse como indicador de qué tan bien se han controlado sus niveles de glucosa.\n\nNota: El GMI necesita al menos 5 días de datos de glucosa.",
         "type": "text"
       },
       "ES.modals.gmiReport.title": {
@@ -11063,11 +11063,11 @@
         "type": "text"
       },
       "ES.modals.selectSensor.fsl2": {
-        "value": "Sensores de Libre 2",
+        "value": "Sensores de Libre 2",
         "type": "text"
       },
       "ES.modals.selectSensor.fsl3": {
-        "value": "Sensores de Libre 3",
+        "value": "Sensores de Libre 3",
         "type": "text"
       },
       "ES.modals.selectSensor.title": {
@@ -11219,7 +11219,7 @@
         "type": "text"
       },
       "ES.modals.logbookAndNotes.foodNoteSet.gramsError": {
-        "value": "Introduzca un número entero entre 0 y 400 gramos",
+        "value": "Introduzca un número entero entre 0 y 400 gramos",
         "type": "text"
       },
       "ES.modals.logbookAndNotes.foodNoteSet.timeOfFood": {
@@ -11319,7 +11319,7 @@
         "type": "text"
       },
       "ES.modals.vitaminCWarning.body": {
-        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor. \nLos suplementos como Airborne® o Emergen-C® contienen dosis altas de vitamina C. Lea las etiquetas de todos los suplementos para conocer su contenido de vitamina C.",
+        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor. \nLos suplementos como Airborne® o Emergen-C® contienen dosis altas de vitamina C. Lea las etiquetas de todos los suplementos para conocer su contenido de vitamina C.",
         "type": "text"
       },
       "ES.modals.vitaminCWarning.title": {
@@ -11507,7 +11507,7 @@
         "type": "text"
       },
       "ES.modals.timeInRangesReport.body": {
-        "value": "Tiempo en el rango proporciona un gráfico que muestra el porcentaje de tiempo que las lecturas de glucosa del sensor estuvieron por encima, por debajo o dentro de un rango determinado de glucosa. El gráfico personalizado se basa en su rango deseado de glucosa, y el gráfico estándar se basa en un rango deseado de 70 a 180 mg/dL.",
+        "value": "Tiempo en el rango proporciona un gráfico que muestra el porcentaje de tiempo que las lecturas de glucosa del sensor estuvieron por encima, por debajo o dentro de un rango determinado de glucosa. El gráfico personalizado se basa en su rango deseado de glucosa, y el gráfico estándar se basa en un rango deseado de 70 a 180 mg/dL.",
         "type": "text"
       },
       "ES.modals.timeInRangesReport.title": {
@@ -11515,11 +11515,11 @@
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.libre2": {
-        "value": "Libre 2",
+        "value": "Libre 2",
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.libre3": {
-        "value": "Libre 3",
+        "value": "Libre 3",
         "type": "text"
       },
       "ES.modals.compatibleHalfSheet.previousApp": {
@@ -11539,7 +11539,7 @@
         "type": "text"
       },
       "ES.modals.dailyPatternsReport.body": {
-        "value": "<p>El gráfico de patrones diarios muestra el patrón y la variabilidad de sus lecturas de glucosa, desde su sensor, durante un día típico. Así se lee el gráfico:</p>\n<ul><li><p>La línea sólida muestra la mediana (punto medio) de las lecturas de glucosa.</p></li><li><p>El área sombreada más próxima a la línea muestra el rango de percentiles 25-75 de sus lecturas.</p></li><li><p>El área sombreada más alejada de la línea muestra el rango de percentiles 5-95 de sus lecturas.</p></li></ul>\n<p>Nota: Patrones diarios necesita al menos 5 días de datos de glucosa.</p>",
+        "value": "<p>El gráfico de patrones diarios muestra el patrón y la variabilidad de sus lecturas de glucosa, desde su sensor, durante un día típico. Así se lee el gráfico:</p>\n<ul><li><p>La línea sólida muestra la mediana (punto medio) de las lecturas de glucosa.</p></li><li><p>El área sombreada más próxima a la línea muestra el rango de percentiles 25-75 de sus lecturas.</p></li><li><p>El área sombreada más alejada de la línea muestra el rango de percentiles 5-95 de sus lecturas.</p></li></ul>\n<p>Nota: Patrones diarios necesita al menos 5 días de datos de glucosa.</p>",
         "type": "text"
       },
       "ES.modals.dailyPatternsReport.title": {
@@ -11563,7 +11563,7 @@
         "type": "text"
       },
       "ES.modals.dailyGraphInformation.body": {
-        "value": "Tu gráfico diario muestra las lecturas diarias de glucosa del sensor.   \n\nSi tu zona horaria cambia, verás el ícono del reloj. Esto puede causar espacios vacíos en el gráfico u ocultar tus lecturas de glucosa. \n\nNota: En el caso de los sensores Libre 2, si el Bluetooth ha perdido su conexión, puede haber espacios vacíos en el gráfico. Para rellenar los espacios vacíos de las últimas 8 horas, escanea tu sensor Libre 2. ",
+        "value": "Tu gráfico diario muestra las lecturas diarias de glucosa del sensor.   \n\nSi tu zona horaria cambia, verás el ícono del reloj. Esto puede causar espacios vacíos en el gráfico u ocultar tus lecturas de glucosa. \n\nNota: En el caso de los sensores Libre 2, si el Bluetooth ha perdido su conexión, puede haber espacios vacíos en el gráfico. Para rellenar los espacios vacíos de las últimas 8 horas, escanea tu sensor Libre 2. ",
         "type": "text"
       },
       "ES.modals.dailyGraphInformation.title": {
@@ -11595,7 +11595,7 @@
         "type": "text"
       },
       "ES.modals.lowGlucoseEventsReport.body": {
-        "value": "Eventos de glucosa baja proporciona información sobre el número de eventos de glucosa baja medidos por el sensor. Un evento de glucosa baja se registra cuando la lectura de glucosa del sensor está por debajo de 70 mg/dL durante más de 15 minutos. El número total de eventos se muestra arriba del gráfico. El gráfico de barras muestra los eventos de glucosa baja en diferentes períodos del día.",
+        "value": "Eventos de glucosa baja proporciona información sobre el número de eventos de glucosa baja medidos por el sensor. Un evento de glucosa baja se registra cuando la lectura de glucosa del sensor está por debajo de 70 mg/dL durante más de 15 minutos. El número total de eventos se muestra arriba del gráfico. El gráfico de barras muestra los eventos de glucosa baja en diferentes períodos del día.",
         "type": "text"
       },
       "ES.modals.lowGlucoseEventsReport.title": {
@@ -11719,7 +11719,7 @@
         "type": "text"
       },
       "ES.modals.appSettingsCarbohydrateUnitsServings.servingsPickerlabel": {
-        "value": "1 porción =",
+        "value": "1 porción =",
         "type": "text"
       },
       "ES.reports.tryAgain": {
@@ -11943,7 +11943,7 @@
         "type": "text"
       },
       "ES.aboutScreen.about.headers.last3Sensors": {
-        "value": "Últimos 3 sensores",
+        "value": "Últimos 3 sensores",
         "type": "text"
       },
       "ES.aboutScreen.about.headers.smartphoneModel": {
@@ -12303,7 +12303,7 @@
         "type": "text"
       },
       "ES.notifications.notify_sensor_expires_in_3_days": {
-        "value": "El sensor caducará dentro de 3 días",
+        "value": "El sensor caducará dentro de 3 días",
         "type": "text"
       },
       "ES.notifications.notify_alarm_serious_low_glucose": {
@@ -13339,7 +13339,7 @@
         "type": "text"
       },
       "ES.homescreenAltText.libreTwo": {
-        "value": " Libre 2",
+        "value": " Libre 2",
         "type": "text"
       },
       "ES.homescreenAltText.withData": {
@@ -13355,7 +13355,7 @@
         "type": "text"
       },
       "ES.homescreenAltText.libreThree": {
-        "value": "Libre 3",
+        "value": "Libre 3",
         "type": "text"
       },
       "ES.homescreenAltText.generalNote": {
@@ -13983,11 +13983,11 @@
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.lowGlucose": {
-        "value": "Glucosa baja (por debajo de 70 mg/dL)",
+        "value": "Glucosa baja (por debajo de 70 mg/dL)",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.highGlucose": {
-        "value": "Glucosa alta (superior a 250 mg/dL)",
+        "value": "Glucosa alta (superior a 250 mg/dL)",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.inRangeGlucose": {
@@ -13995,11 +13995,11 @@
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.lowBetweenGlucose": {
-        "value": "Entre el rango deseado y 70 mg/dL",
+        "value": "Entre el rango deseado y 70 mg/dL",
         "type": "text"
       },
       "ES.SystemOnboardingGlucoseColors.glucoseColorsScreen.highBetweenGlucose": {
-        "value": "Entre el rango deseado y 250 mg/dL",
+        "value": "Entre el rango deseado y 250 mg/dL",
         "type": "text"
       },
       "ES.SystemOnboardingStayConnected.stayConnectedScreen.title": {
@@ -14139,7 +14139,7 @@
         "type": "text"
       },
       "ES.SystemOnboardingVitaminCWarning.vitaminCWarning.bodyCopy": {
-        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor.",
+        "value": "No tome dosis altas de vitamina C (más de 500 mg por día). Esto puede elevar de manera falsa las lecturas del sensor.",
         "type": "text"
       },
       "ES.SystemOnboardingVitaminCWarning.vitaminCWarning.bodyCopy2": {
