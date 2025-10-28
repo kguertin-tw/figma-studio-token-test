@@ -1,4 +1,5 @@
 import json
+import sys
 
 def flatten_to_text_tokens(obj, prefix="", out=None):
     """
@@ -30,7 +31,7 @@ def flatten_to_text_tokens(obj, prefix="", out=None):
     
     return out
 
-def create_token_sets(data):
+def create_token_sets(data, locale_prefix=None):
     """
     Create properly structured token sets for Tokens Studio
     """
@@ -44,6 +45,11 @@ def create_token_sets(data):
         cleaned = {}
         for key, value in flattened.items():
             clean_key = key.replace('.value', '')
+            
+            # Add locale prefix if provided
+            if locale_prefix:
+                clean_key = f"{locale_prefix}.{clean_key}"
+            
             cleaned[clean_key] = value
         
         # Organize into a clean structure for Tokens Studio
@@ -55,17 +61,32 @@ def create_token_sets(data):
 with open("content.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
+# Check for locale prefix argument
+locale_prefix = None
+if len(sys.argv) > 1:
+    locale_prefix = sys.argv[1]
+    print(f"Using locale prefix: {locale_prefix}")
+
 # Convert to Tokens Studio format
 if isinstance(data, dict):
     # Create token sets optimized for Tokens Studio
-    token_sets = create_token_sets(data)
+    token_sets = create_token_sets(data, locale_prefix)
     
     # Create the final structure
     output = token_sets
 else:
     # If it's not a dict, create a single token set
-    output = {"global": flatten_to_text_tokens(data)}
+    flattened = flatten_to_text_tokens(data)
+    cleaned = {}
+    for key, value in flattened.items():
+        clean_key = key.replace('.value', '')
+        if locale_prefix:
+            clean_key = f"{locale_prefix}.{clean_key}"
+        cleaned[clean_key] = value
+    output = {"global": cleaned}
 
 # Write the optimized structure
 with open("content_tokens_studio.json", "w", encoding="utf-8") as f:
-    json.dump(output, f, ensure_ascii=False, indent=2) 
+    json.dump(output, f, ensure_ascii=False, indent=2)
+
+print("Conversion completed successfully!") 
